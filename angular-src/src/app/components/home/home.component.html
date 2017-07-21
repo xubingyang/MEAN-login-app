@@ -1,5 +1,5 @@
 <div class="jumbotron text-center">
-  <h1>账户登录</h1>
+  <h1>信息管理系统</h1>
   <p class="lead">写了个简单的信息管理、发布系统。现在主要用于我自己的VPN服务器端口和密码的发布。</p>
   <div>
     <a class="btn btn-primary" [routerLink]="['/register']">注册</a> <a class="btn btn-default" [routerLink]="['/login']">登录</a>
@@ -7,16 +7,21 @@
 </div>
 
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-3">
     <h3>Node.js+Express做后端</h3>
     <p>Node.js+Express做服务器端，用Mongoose链接数据库。</p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-3">
     <h3>Angular做前端</h3>
     <p>刚开始用Angular2，就发布了Angular4。无限Debugging中，我也是很无语…</p>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-3">
     <h3>Tokens验证</h3>
     <p>JSON web tokens存在Local Storage里，并没有使用cookie.</p>
+  </div>
+  <div class="col-md-3">
+    <h3>Guest账号</h3>
+    <p>为了安全性，设置了注册和登录系统。
+    Guest账号密码是123456.</p>
   </div>
 </div>

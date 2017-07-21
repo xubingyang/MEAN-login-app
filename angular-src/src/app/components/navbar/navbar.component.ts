@@ -18,6 +18,12 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  isIn = false;   // store state
+  toggleState() { // click handler
+      let bool = this.isIn;
+      this.isIn = bool === false ? true : false; 
+  }
+    
   onLogoutClick(){
     this.authService.logout();
     this.flashMessage.show('您已登出。', {
