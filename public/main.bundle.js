@@ -644,7 +644,7 @@ module.exports = "<h2 class=\"page-header\">控制面板</h2>\n<p>控制面板�
 /***/ 683:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <h1>账户登录</h1>\n  <p class=\"lead\">写了个简单的信息管理、发布系统。现在主要用于我自己的VPN服务器端口喝密码的发布。</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">注册</a> <a class=\"btn btn-default\" [routerLink]=\"['/login']\">登录</a>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-md-4\">\n    <h3>Node.js+Express做后端</h3>\n    <p>Node.js+Express做服务器端，用Mongoose链接数据库。</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>Angular做前端</h3>\n    <p>刚开始用Angular2，就发布了Angular4。无限Debugging中，我也是很无语…</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>Tokens验证</h3>\n    <p>JSON web tokens存在Local Storage里，并没有使用cookie.</p>\n  </div>\n</div>\n"
+module.exports = "<div class=\"jumbotron text-center\">\n  <h1>账户登录</h1>\n  <p class=\"lead\">写了个简单的信息管理、发布系统。现在主要用于我自己的VPN服务器端口和密码的发布。</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">注册</a> <a class=\"btn btn-default\" [routerLink]=\"['/login']\">登录</a>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-md-4\">\n    <h3>Node.js+Express做后端</h3>\n    <p>Node.js+Express做服务器端，用Mongoose链接数据库。</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>Angular做前端</h3>\n    <p>刚开始用Angular2，就发布了Angular4。无限Debugging中，我也是很无语…</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>Tokens验证</h3>\n    <p>JSON web tokens存在Local Storage里，并没有使用cookie.</p>\n  </div>\n</div>\n"
 
 /***/ }),
 
