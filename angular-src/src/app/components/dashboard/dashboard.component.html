@@ -1,7 +1,7 @@
 <h2 class=page-header>VPN账号发布页</h2>
-<ul class="nav nav-tabs">
-  <li class="active"><a href="/dashboard#shadowsocks" data-toggle="tab" aria-expanded="true">ShadowSocks服务器</a></li>
-  <li class=""><a href="/dashboard#gfwpress" data-toggle="tab" aria-expanded="false">GFW.press服务器</a></li>
+<ul class="nav nav-pills">
+  <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}" class="active"><a href="/dashboard#shadowsocks" data-toggle="tab" aria-expanded="false">ShadowSocks服务器</a></li>
+  <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}" class=""><a href="/dashboard#gfwpress" data-toggle="tab" aria-expanded="false">GFW.press服务器</a></li>
 </ul>
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane active in" id="shadowsocks">
