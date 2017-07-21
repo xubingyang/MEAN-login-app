@@ -16,9 +16,9 @@ router.post('/register', (req, res, next) => {
 
   User.addUser(newUser, (err, user) => {
     if(err){
-      res.json({success: false, msg:'Failed to register user'});
+      res.json({success: false, msg:'注册失败！'});
     } else {
-      res.json({success: true, msg:'User registered'});
+      res.json({success: true, msg:'注册成功！'});
     }
   });
 });
@@ -31,14 +31,14 @@ router.post('/authenticate', (req, res, next) => {
   User.getUserByUsername(username, (err, user) => {
     if(err) throw err;
     if(!user){
-      return res.json({success: false, msg: 'User not found'});
+      return res.json({success: false, msg: '用户名错误！'});
     }
 
     User.comparePassword(password, user.password, (err, isMatch) => {
       if(err) throw err;
       if(isMatch){
         const token = jwt.sign(user, config.secret, {
-          expiresIn: 604800 // 1 week
+          expiresIn: 259200 // 3 days
         });
 
         res.json({
@@ -52,7 +52,7 @@ router.post('/authenticate', (req, res, next) => {
           }
         });
       } else {
-        return res.json({success: false, msg: 'Wrong password'});
+        return res.json({success: false, msg: '密码错误！'});
       }
     });
   });
