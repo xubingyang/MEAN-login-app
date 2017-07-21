@@ -1,18 +1,31 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>账户登录</title>
+  <meta charset="utf-8"><!-- HTML5规范下的网页字符集 -->
+	<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1"/><!-- 浏览器采取何种版本渲染当前页面 -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/><!-- 移动端的窗口 -->
+	<meta name="author" content="Bingyang Xu, hi@xubingyang.com"><!-- 作者 -->
+	<meta name="description" content="一个简单的MEAN Stack搭建的登录页，主要用于发布信息。"><!-- 网站内容描述 -->
+	<meta name="keywords" content="小秉,徐秉阳,秉阳,xubingyang, xubingyang.com, MEAN stack, VPN"><!-- 关键字 -->
+	<meta name="copyright" content="xubingyang.com"><!-- 版权 -->
+	<meta http-equiv="Cache-Control" content="no-siteapp"/><!--禁止百度Siteapp自动转码-->
+  <title>信息发布页</title>
   <link rel="stylesheet" href="https://bootswatch.com/sandstone/bootstrap.min.css">
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<!-- favicons 开始-->
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+  <link rel="manifest" href="../favicons/manifest.json">
+  <link rel="mask-icon" href="../favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff"><!-- favicons 结束-->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script type="text/javascript" src="assets/js/jquery-2.0.2.min.js"></script>
   <script type="text/javascript" src="assets/js/main.js"></script>
   <style>
 	#loading{
-		background-color: #17607d;
+		background-color: #fffeff;
 		height: 100%;
 		width: 100%;
 		position: fixed;
@@ -44,9 +57,9 @@
 		-webkit-border-radius: 50% 50% 50% 50%;
 		border-radius: 50% 50% 50% 50%;
 		position: absolute;
-		border-top: 5px solid #FFF;
+		border-top: 5px solid #17607d;
 		border-bottom: 5px solid transparent;
-		border-left:  5px solid #FFF;
+		border-left:  5px solid #17607d;
 		border-right: 5px solid transparent;
 		
 		-webkit-animation: animate 2s infinite;
@@ -114,20 +127,18 @@
 		
 		}
 
-
-
-
 	</style>
 </head>
 <body>
-  <app-root>
-  	<div id="loading">
-	<div id="loading-center">
-	<div id="loading-center-absolute">
-	<div class="object" id="object_four"></div>
-	<div class="object" id="object_three"></div>
-	<div class="object" id="object_two"></div>
-	<div class="object" id="object_one"></div>
-</app-root>
+  	<app-root>
+	  	<div id="loading">
+		<div id="loading-center">
+		<div id="loading-center-absolute">
+		<div class="object" id="object_four"></div>
+		<div class="object" id="object_three"></div>
+		<div class="object" id="object_two"></div>
+		<div class="object" id="object_one"></div>
+	</app-root>
+
 <script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
 </html>

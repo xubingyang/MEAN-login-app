@@ -630,7 +630,7 @@ module.exports = ""
 /***/ 681:
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\n<div class=\"container\">\n  <flash-messages></flash-messages>\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "\n<app-navbar></app-navbar>\n<div class=\"container\">\n  <flash-messages></flash-messages>\n  <router-outlet></router-outlet>\n</div>\n<br><br><br>\n<footer class=\"footer\">\n    <p style=\"text-align: right\">版权所有. xubingyang.com 2012-2017 &copy; All right reserved.</p>\n</footer>"
 
 /***/ }),
 
