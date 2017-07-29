@@ -3,13 +3,14 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  selector: 'app-contacts',
+  templateUrl: './contacts.component.html',
+  styleUrls: ['./contacts.component.css']
 })
-export class ProfileComponent implements OnInit {
-  user:Object;
 
+export class ContactsComponent implements OnInit {
+  user: Object;
+  
   constructor(private authService:AuthService, private router:Router) { }
 
   ngOnInit() {

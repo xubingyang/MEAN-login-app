@@ -1,0 +1,20 @@
+a {
+    color: inherit;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.realname{
+   text-indent: 30px;
+}
+
+.list-header{
+  text-indent: 15px;
+  font-size: 18px;
+}
