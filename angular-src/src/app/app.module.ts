@@ -25,8 +25,8 @@ const appRoutes: Routes =  [
   {path:'login', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
   {path:'profile', component: ProfileComponent, canActivate:[AuthGuard]},
-  {path:'contacts', component: ContactsComponent},
-  {path:'contact', component: ContactComponent}
+  {path:'contacts', component: ContactsComponent, canActivate:[AuthGuard]},
+  {path:'contact', component: ContactComponent, canActivate:[AuthGuard]}
 ]
 
 @NgModule({

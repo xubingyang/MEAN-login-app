@@ -15,16 +15,15 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <!-- <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/dashboard']">VPN发布页</a></li>
-            <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/profile']">用户信息</a></li>
-          -->
+        <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/dashboard']">VPN发布页</a></li>
+        <!-- <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/profile']">用户信息</a></li>-->
         <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/login']">登录</a></li>
         <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/register']">注册</a></li>
         <!-- <li *ngIf="authService.loggedIn()"><a (click)="onLogoutClick()" href="#">登出</a></li>-->
         <li class="dropdown" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">用户<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li *ngIf="authService.loggedIn()"><a [routerLink]="['/dashboard']">VPN发布页</a></li>
+            <li *ngIf="authService.loggedIn()"><a [routerLink]="['/contacts']">通讯录</a></li>
             <li *ngIf="authService.loggedIn()"><a [routerLink]="['/profile']">用户信息</a></li>
             <li class="divider"></li>
             <li *ngIf="authService.loggedIn()"><a (click)="onLogoutClick()" href="#">登出</a></li>
