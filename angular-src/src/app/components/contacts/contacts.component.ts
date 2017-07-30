@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
+import { ContactService } from '../../services/contact.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,13 +10,13 @@ import { Router } from '@angular/router';
 })
 
 export class ContactsComponent implements OnInit {
-  user: Object;
+  contact: Object;
   
-  constructor(private authService:AuthService, private router:Router) { }
+  constructor(private authService:AuthService, private contactService:ContactService, private router:Router) { }
 
   ngOnInit() {
-    this.authService.getProfile().subscribe(profile => {
-      this.user = profile.user;
+    this.contactService.getContact().subscribe(profile => {
+      this.contact = profile.contact;
     },
     err => {
       console.log(err);
