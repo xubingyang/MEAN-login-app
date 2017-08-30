@@ -1,7 +1,7 @@
 {
-  "name": "meanauthapp",
+  "name": "meanpanelapp",
   "version": "1.0.0",
-  "description": "MEAN stack authentication app",
+  "description": "MEAN stack authentication & login app",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,6 +17,6 @@
     "passport": "*",
     "passport-jwt": "*"
   },
-  "author": "Brad Traversy",
+  "author": "Bingyang Xu",
   "license": "ISC"
 }
