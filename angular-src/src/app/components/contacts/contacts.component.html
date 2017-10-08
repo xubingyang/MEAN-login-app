@@ -1,68 +1,537 @@
+<app-navbar></app-navbar>
 <div class="container">
   <div class="page-header">
-    <h1>通讯录<small> | 备份来自Goole&nbsp;&amp;&nbsp;Apple</small></h1>
+    <h1>通讯录<small> | 备份来自Google&nbsp;&amp;&nbsp;Apple</small></h1>
   </div>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  
   <div class="row">
-    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-      <div class="input-group">
-        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
-        <input type="text" id="filterInput" class="form-control" placeholder="搜索..." aria-describedby="basic-addon1">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+          <div class="panel panel-default">
+              <div class="panel-body">
+                  <div class="input-group">
+                      <input type="text" id="search" name="search" class="form-control" placeholder="搜索...">
+                      <span class="input-group-btn">
+                          <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                      </span>
+                  </div>
+              </div>
+          </div>
       </div>
-      <hr>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <strong>A</strong>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="media-main">
+            <a class="pull-left" href="#">
+                          <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_1.jpg" alt="">
+                      </a>
+            <div class="pull-right btn-group-sm">
+              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                              <i class="fa fa-pencil"></i>
+                          </a>
+              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                              <i class="fa fa-close"></i>
+                          </a>
+            </div>
+            <div class="info">
+              <h4>Bingyang Xu</h4>
+              <p class="text-muted">Engineer</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <hr>
+          <ul class="social-links list-inline p-b-10">
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
+            </li>
+          </ul>
         </div>
-        <ul class="list-group" id="contact-list">
-          <li class="list-group-item">
-            <div class="col-xs-3">
-              <img src="http://api.randomuser.me/portraits/men/50.jpg" height="50" width="50" alt="Scott Stevens" class="img-circle" />
-            </div>
-            <div class="col-xs-9">
-              <div class="pinyin">
-                <small>Xu&nbsp;Bingyang</small>
-              </div>
-              <div class="character">
-                <Strong>徐&nbsp;秉阳</Strong>
-              </div>
-            </div>
-            <div class="clearfix"></div>
-          </li>
-          <li class="list-group-item">
-            <div class="col-xs-3">
-              <img src="http://api.randomuser.me/portraits/men/50.jpg" height="50" width="50" alt="Scott Stevens" class="img-circle" />
-            </div>
-            <div class="col-xs-9">
-              <div class="pinyin">
-                <small>Xu&nbsp;Bingyang</small>
-              </div>
-              <div class="character">
-                <Strong>徐&nbsp;秉阳</Strong>
-              </div>
-            </div>
-            <div class="clearfix"></div>
-          </li>
-        </ul>
-        <div class="panel-heading">
-          <strong>B</strong>
-        </div>
-        <ul class="list-group" id="contact-list">
-          <li class="list-group-item">
-            <div class="col-xs-3">
-              <img src="http://api.randomuser.me/portraits/men/50.jpg" height="50" width="50" alt="Scott Stevens" class="img-circle" />
-            </div>
-            <div class="col-xs-9">
-              <div class="pinyin">
-                <small>Xu&nbsp;Bingyang</small>
-              </div>
-              <div class="character">
-                <Strong>徐&nbsp;秉阳</Strong>
-              </div>
-            </div>
-            <div class="clearfix"></div>
-          </li>
-        </ul>
       </div>
     </div>
+
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="media-main">
+            <a class="pull-left" href="#">
+                          <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_2.jpg" alt="">
+                      </a>
+            <div class="pull-right btn-group-sm">
+              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                              <i class="fa fa-pencil"></i>
+                          </a>
+              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                              <i class="fa fa-close"></i>
+                          </a>
+            </div>
+            <div class="info">
+              <h4>Bingyang Xu</h4>
+              <p class="text-muted">Engineer</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <hr>
+          <ul class="social-links list-inline">
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="media-main">
+            <a class="pull-left" href="#">
+                          <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_2.jpg" alt="">
+                      </a>
+            <div class="pull-right btn-group-sm">
+              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                              <i class="fa fa-pencil"></i>
+                          </a>
+              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                              <i class="fa fa-close"></i>
+                          </a>
+            </div>
+            <div class="info">
+              <h4>Bingyang Xu</h4>
+              <p class="text-muted">Engineer</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <hr>
+          <ul class="social-links list-inline">
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="media-main">
+            <a class="pull-left" href="#">
+                          <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_2.jpg" alt="">
+                      </a>
+            <div class="pull-right btn-group-sm">
+              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                              <i class="fa fa-pencil"></i>
+                          </a>
+              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                              <i class="fa fa-close"></i>
+                          </a>
+            </div>
+            <div class="info">
+              <h4>Bingyang Xu</h4>
+              <p class="text-muted">Engineer</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <hr>
+          <ul class="social-links list-inline">
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="media-main">
+            <a class="pull-left" href="#">
+                          <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_2.jpg" alt="">
+                      </a>
+            <div class="pull-right btn-group-sm">
+              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                              <i class="fa fa-pencil"></i>
+                          </a>
+              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                              <i class="fa fa-close"></i>
+                          </a>
+            </div>
+            <div class="info">
+              <h4>Bingyang Xu</h4>
+              <p class="text-muted">Engineer</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <hr>
+          <ul class="social-links list-inline">
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="media-main">
+            <a class="pull-left" href="#">
+                          <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_2.jpg" alt="">
+                      </a>
+            <div class="pull-right btn-group-sm">
+              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                              <i class="fa fa-pencil"></i>
+                          </a>
+              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                              <i class="fa fa-close"></i>
+                          </a>
+            </div>
+            <div class="info">
+              <h4>Bingyang Xu</h4>
+              <p class="text-muted">Engineer</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <hr>
+          <ul class="social-links list-inline">
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="media-main">
+            <a class="pull-left" href="#">
+                          <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_2.jpg" alt="">
+                      </a>
+            <div class="pull-right btn-group-sm">
+              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                              <i class="fa fa-pencil"></i>
+                          </a>
+              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                              <i class="fa fa-close"></i>
+                          </a>
+            </div>
+            <div class="info">
+              <h4>Bingyang Xu</h4>
+              <p class="text-muted">Engineer</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <hr>
+          <ul class="social-links list-inline">
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="media-main">
+            <a class="pull-left" href="#">
+                          <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_2.jpg" alt="">
+                      </a>
+            <div class="pull-right btn-group-sm">
+              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                              <i class="fa fa-pencil"></i>
+                          </a>
+              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                              <i class="fa fa-close"></i>
+                          </a>
+            </div>
+            <div class="info">
+              <h4>Bingyang Xu</h4>
+              <p class="text-muted">Engineer</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <hr>
+          <ul class="social-links list-inline">
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="media-main">
+            <a class="pull-left" href="#">
+                          <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_2.jpg" alt="">
+                      </a>
+            <div class="pull-right btn-group-sm">
+              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                              <i class="fa fa-pencil"></i>
+                          </a>
+              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                              <i class="fa fa-close"></i>
+                          </a>
+            </div>
+            <div class="info">
+              <h4>Bingyang Xu</h4>
+              <p class="text-muted">Engineer</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <hr>
+          <ul class="social-links list-inline">
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="media-main">
+            <a class="pull-left" href="#">
+                          <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_2.jpg" alt="">
+                      </a>
+            <div class="pull-right btn-group-sm">
+              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                              <i class="fa fa-pencil"></i>
+                          </a>
+              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                              <i class="fa fa-close"></i>
+                          </a>
+            </div>
+            <div class="info">
+              <h4>Bingyang Xu</h4>
+              <p class="text-muted">Engineer</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <hr>
+          <ul class="social-links list-inline">
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="media-main">
+            <a class="pull-left" href="#">
+                          <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_2.jpg" alt="">
+                      </a>
+            <div class="pull-right btn-group-sm">
+              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                              <i class="fa fa-pencil"></i>
+                          </a>
+              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                              <i class="fa fa-close"></i>
+                          </a>
+            </div>
+            <div class="info">
+              <h4>Bingyang Xu</h4>
+              <p class="text-muted">Engineer</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <hr>
+          <ul class="social-links list-inline">
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="media-main">
+            <a class="pull-left" href="#">
+                          <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_2.jpg" alt="">
+                      </a>
+            <div class="pull-right btn-group-sm">
+              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
+                              <i class="fa fa-pencil"></i>
+                          </a>
+              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                              <i class="fa fa-close"></i>
+                          </a>
+            </div>
+            <div class="info">
+              <h4>Bingyang Xu</h4>
+              <p class="text-muted">Engineer</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <hr>
+          <ul class="social-links list-inline">
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
   </div>
-</div>
+<script>
+$(function(){
+ $("a[data-toggle='tooltip']").tooltip();
+});
+</script>

@@ -14,6 +14,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { SandboxComponent } from './components/sandbox/sandbox.component';
+import { VpnComponent } from './components/vpn/vpn.component';
 
 import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service';
@@ -25,9 +27,11 @@ const appRoutes: Routes =  [
   {path:'register', component: RegisterComponent},
   {path:'login', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
-  {path:'profile', component: ProfileComponent},
-  {path:'contacts', component: ContactsComponent},
-  {path:'contact', component: ContactComponent}
+  {path:'profile', component: ProfileComponent, canActivate:[AuthGuard]},
+  {path:'contacts', component: ContactsComponent, canActivate:[AuthGuard]},
+  {path:'contact', component: ContactComponent, canActivate:[AuthGuard]},
+  {path:'sandbox', component: SandboxComponent},
+  {path:'vpn', component: VpnComponent, canActivate:[AuthGuard]}
 ]
 
 @NgModule({
@@ -40,7 +44,9 @@ const appRoutes: Routes =  [
     DashboardComponent,
     ProfileComponent,
     ContactsComponent,
-    ContactComponent
+    ContactComponent,
+    SandboxComponent,
+    VpnComponent
   ],
   imports: [
     BrowserModule,

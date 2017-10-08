@@ -1,0 +1,28 @@
+a {
+    color: inherit;
+}
+
+a:link { 
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+hr {
+    margin: 10px 0 5px 0;
+}
+
+button {
+    margin: 10px 0;
+}
+
+#shadowsocks, #gfwpress {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.page-header {
+    margin: 20px 0 10px 0;
+}

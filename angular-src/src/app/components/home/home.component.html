@@ -1,27 +1,38 @@
-<div class="jumbotron text-center">
-  <h1>信息管理系统</h1>
-  <p class="lead">写了个简单的信息管理、发布系统。现在主要用于我自己的VPN服务器端口和密码的发布。</p>
-  <div>
-    <a class="btn btn-primary" [routerLink]="['/register']">注册</a> <a class="btn btn-default" [routerLink]="['/login']">登录</a>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-3">
-    <h3>Node.js+Express做后端</h3>
-    <p>Node.js+Express做服务器端，用Mongoose链接数据库。</p>
-  </div>
-  <div class="col-md-3">
+<header id="main">
+    <h1>信息管理系统</h1>
+    <br>
+    <p>写了个简单的用于发布信息和管理后台的系统，</p> 
+    <p>现在主要用于我自己的VPN服务器端口和密码的发布。</p>
+    <div class="btn-row">
+        <a class="button btn-register" [routerLink]="['/register']">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="button btn-login" [routerLink]="['/login']">登录</a>
+    </div>     
+</header>
+<section id="section-a">
     <h3>Angular做前端</h3>
-    <p>刚开始用Angular2，就发布了Angular4。无限Debugging中，我也是很无语…</p>
-  </div>
-  <div class="col-md-3">
-    <h3>Tokens验证</h3>
-    <p>JSON web tokens存在Local Storage里，并没有使用cookie.</p>
-  </div>
-  <div class="col-md-3">
-    <h3>Guest账号</h3>
-    <p>为了安全性，设置了注册和登录系统。
-    Guest账号密码是123456.</p>
-  </div>
-</div>
+    <p>刚开始用Angular2，就发布了Angular4。无限Debugging中，我也是很无语…不过好消息是已经完全适配了Angular4作为前端引擎。</p>
+</section>
+<section id="section-b">
+    <h3>同时适配了Bootstrap4-beta</h3>
+    <p>刚发布Bootstrap4-alpha的时候就激动的改了整个UI，但是在Bootstrap4-beta版本里各种classname又TMD莫名其妙的改了，真是太无语了。</p>
+    <p>默默祈祷以后的版本里不会再该classname.</p>
+</section>
+<section id="section-c">
+    <div class="row">
+        <div class="col-md-4 part1">
+            <h3>Node.js+Express做后端</h3>
+            <p>Node.js+Express做服务器端，用Mongoose链接数据库。</p>
+            <p>但是特别想改用Firebase做后端。</p>
+        </div>
+        <div class="col-md-4 part2">
+            <h3>Tokens验证</h3>
+            <p>JSON web tokens存在Local Storage里。</p>
+            <p>并没有使用cookie.</p>
+        </div>
+        <div class="col-md-4 part3">
+            <h3>Guest账号</h3>
+            <p>为了安全性，设置了注册和登录系统。</p>
+            <p>账号:Guest, 密码:123456.</p>
+        </div>
+    </div>
+</section>

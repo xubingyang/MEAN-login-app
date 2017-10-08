@@ -1,4 +1,4 @@
-webpackJsonp([3],{
+webpackJsonp(["vendor"],{
 
 /***/ "../../../../angular2-flash-messages/index.js":
 /***/ (function(module, exports, __webpack_require__) {
@@ -863,7 +863,7 @@ var root_1 = __webpack_require__("../../../../rxjs/util/root.js");
 var toSubscriber_1 = __webpack_require__("../../../../rxjs/util/toSubscriber.js");
 var observable_1 = __webpack_require__("../../../../rxjs/symbol/observable.js");
 /**
- * A representation of any set of values over any amount of time. This the most basic building block
+ * A representation of any set of values over any amount of time. This is the most basic building block
  * of RxJS.
  *
  * @class Observable<T>
@@ -871,7 +871,7 @@ var observable_1 = __webpack_require__("../../../../rxjs/symbol/observable.js");
 var Observable = (function () {
     /**
      * @constructor
-     * @param {Function} subscribe the function that is  called when the Observable is
+     * @param {Function} subscribe the function that is called when the Observable is
      * initially subscribed to. This function is given a Subscriber, to which new values
      * can be `next`ed, or an `error` method can be called to raise an error, or
      * `complete` can be called to notify of a successful completion.
@@ -900,7 +900,7 @@ var Observable = (function () {
      *
      * <span class="informal">Use it when you have all these Observables, but still nothing is happening.</span>
      *
-     * `subscribe` is not a regular operator, but a method that calls Observables internal `subscribe` function. It
+     * `subscribe` is not a regular operator, but a method that calls Observable's internal `subscribe` function. It
      * might be for example a function that you passed to a {@link create} static factory, but most of the time it is
      * a library implementation, which defines what and when will be emitted by an Observable. This means that calling
      * `subscribe` is actually the moment when Observable starts its work, not when it is created, as it is often
@@ -942,7 +942,7 @@ var Observable = (function () {
      *     console.log('Adding: ' + value);
      *     this.sum = this.sum + value;
      *   },
-     *   error() { // We actually could just remote this method,
+     *   error() { // We actually could just remove this method,
      *   },        // since we do not really care about errors right now.
      *   complete() {
      *     console.log('Sum equals: ' + this.sum);
@@ -997,7 +997,7 @@ var Observable = (function () {
      * // Logs:
      * // 0 after 1s
      * // 1 after 2s
-     * // "unsubscribed!" after 2,5s
+     * // "unsubscribed!" after 2.5s
      *
      *
      * @param {Observer|Function} observerOrNext (optional) Either an observer with methods to be called,
@@ -3582,7 +3582,6 @@ var FilterSubscriber = (function (_super) {
         this.predicate = predicate;
         this.thisArg = thisArg;
         this.count = 0;
-        this.predicate = predicate;
     }
     // the try catch block below is left specifically for
     // optimization and perf reasons. a tryCatcher is not necessary here.
@@ -5441,12 +5440,11 @@ module.exports = g;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgLocaleLocalization", function() { return NgLocaleLocalization; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgLocalization", function() { return NgLocalization; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵparseCookieValue", function() { return parseCookieValue; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CommonModule", function() { return CommonModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeprecatedI18NPipesModule", function() { return DeprecatedI18NPipesModule; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgClass", function() { return NgClass; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgFor", function() { return NgFor; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgForOf", function() { return NgForOf; });
@@ -5492,9 +5490,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Location", function() { return Location; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return COMMON_DIRECTIVES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return COMMON_PIPES; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 
 /**
- * @license Angular v4.3.1
+ * @license Angular v4.4.1
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -6738,7 +6738,7 @@ var NgClass = (function () {
             this._keyValueDiffer = null;
             this._rawClass = typeof v === 'string' ? v.split(/\s+/) : v;
             if (this._rawClass) {
-                if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisListLikeIterable"])(this._rawClass)) {
+                if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisListLikeIterable"])(this._rawClass)) {
                     this._iterableDiffer = this._iterableDiffers.find(this._rawClass).create();
                 }
                 else {
@@ -6799,7 +6799,7 @@ var NgClass = (function () {
                 _this._toggleClass(record.item, true);
             }
             else {
-                throw new Error("NgClass can only toggle CSS classes expressed as strings, got " + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(record.item));
+                throw new Error("NgClass can only toggle CSS classes expressed as strings, got " + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(record.item));
             }
         });
         changes.forEachRemovedItem(function (record) { return _this._toggleClass(record.item, false); });
@@ -7131,7 +7131,7 @@ var NgForOf = (function () {
          * @return {?}
          */
         set: function (fn) {
-            if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])() && fn != null && typeof fn !== 'function') {
+            if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])() && fn != null && typeof fn !== 'function') {
                 // TODO(vicb): use a log service once there is a public one available
                 if ((console) && (console.warn)) {
                     console.warn("trackBy must be a function, but received " + JSON.stringify(fn) + ". " +
@@ -8101,7 +8101,7 @@ var COMMON_DIRECTIVES = [
  * @return {?}
  */
 function invalidPipeArgumentError(type, value) {
-    return Error("InvalidPipeArgument: '" + value + "' for pipe '" + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(type) + "'");
+    return Error("InvalidPipeArgument: '" + value + "' for pipe '" + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(type) + "'");
 }
 /**
  * @license
@@ -8240,10 +8240,10 @@ var AsyncPipe = (function () {
      * @return {?}
      */
     AsyncPipe.prototype._selectStrategy = function (obj) {
-        if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisPromise"])(obj)) {
+        if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisPromise"])(obj)) {
             return _promiseStrategy;
         }
-        if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisObservable"])(obj)) {
+        if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisObservable"])(obj)) {
             return _observableStrategy;
         }
         throw invalidPipeArgumentError(AsyncPipe, obj);
@@ -8908,8 +8908,8 @@ var ISO8601_DATE_REGEX = /^(\d{4})-?(\d\d)-?(\d\d)(?:T(\d\d)(?::?(\d\d)(?::?(\d\
  *  | month     |   M    | L (S)  | MMM (Sep)    | MMMM (September)  | M (9)     | MM (09)   |
  *  | day       |   d    | -      | -            | -                 | d (3)     | dd (03)   |
  *  | weekday   |   E    | E (S)  | EEE (Sun)    | EEEE (Sunday)     | -         | -         |
- *  | hour      |   j    | -      | -            | -                 | j (13)    | jj (13)   |
- *  | hour12    |   h    | -      | -            | -                 | h (1 PM)  | hh (01 PM)|
+ *  | hour      |   j    | -      | -            | -                 | j (1 PM)  | jj (1 PM) |
+ *  | hour12    |   h    | -      | -            | -                 | h (1)     | hh (01)   |
  *  | hour24    |   H    | -      | -            | -                 | H (13)    | HH (13)   |
  *  | minute    |   m    | -      | -            | -                 | m (5)     | mm (05)   |
  *  | second    |   s    | -      | -            | -                 | s (9)     | ss (09)   |
@@ -9360,6 +9360,30 @@ CommonModule.decorators = [
  */
 CommonModule.ctorParameters = function () { return []; };
 /**
+ * I18N pipes are being changed to move away from using the JS Intl API.
+ *
+ * The former pipes relying on the Intl API will be moved to this module while the `CommonModule`
+ * will contain the new pipes that do not rely on Intl.
+ *
+ * As a first step this module is created empty to ease the migration.
+ *
+ * see https://github.com/angular/angular/pull/18284
+ *
+ * @deprecated from v5
+ */
+var DeprecatedI18NPipesModule = (function () {
+    function DeprecatedI18NPipesModule() {
+    }
+    return DeprecatedI18NPipesModule;
+}());
+DeprecatedI18NPipesModule.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{ declarations: [], exports: [] },] },
+];
+/**
+ * @nocollapse
+ */
+DeprecatedI18NPipesModule.ctorParameters = function () { return []; };
+/**
  * @license
  * Copyright Google Inc. All Rights Reserved.
  *
@@ -9437,7 +9461,7 @@ function isPlatformWorkerUi(platformId) {
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.4.1');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -9476,11 +9500,10 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1'
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* unused harmony export VERSION */
 /* unused harmony export TEMPLATE_TRANSFORMS */
 /* unused harmony export CompilerConfig */
+/* unused harmony export preserveWhitespacesDefault */
 /* unused harmony export JitCompiler */
 /* unused harmony export DirectiveResolver */
 /* unused harmony export PipeResolver */
@@ -9682,6 +9705,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1'
 /* unused harmony export getNsPrefix */
 /* unused harmony export mergeNsAndName */
 /* unused harmony export NAMED_ENTITIES */
+/* unused harmony export NGSP_UNICODE */
 /* unused harmony export debugOutputAstAsTypeScript */
 /* unused harmony export TypeScriptEmitter */
 /* unused harmony export ParseLocation */
@@ -9704,9 +9728,11 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1'
 /* unused harmony export splitClasses */
 /* unused harmony export createElementCssSelector */
 /* unused harmony export removeSummaryDuplicates */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 
 /**
- * @license Angular v4.3.1
+ * @license Angular v4.4.1
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -9726,7 +9752,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1'
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.4.1');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -10716,6 +10742,10 @@ var NAMED_ENTITIES = {
     'zwj': '\u200D',
     'zwnj': '\u200C',
 };
+// The &ngsp; pseudo-entity is denoting a space. see:
+// https://github.com/dart-lang/angular/blob/0bb611387d29d65b5af7f9d2515ab571fd3fbee4/_tests/test/compiler/preserve_whitespace_test.dart
+var NGSP_UNICODE = '\uE500';
+NAMED_ENTITIES['ngsp'] = NGSP_UNICODE;
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -11377,12 +11407,12 @@ var ValueTransformer = (function () {
 }());
 var SyncAsync = {
     assertSync: function (value) {
-        if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisPromise"])(value)) {
+        if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisPromise"])(value)) {
             throw new Error("Illegal state: value cannot be a promise");
         }
         return value;
     },
-    then: function (value, cb) { return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisPromise"])(value) ? value.then(cb) : cb(value); },
+    then: function (value, cb) { return Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisPromise"])(value) ? value.then(cb) : cb(value); },
     all: function (syncAsyncValues) {
         return syncAsyncValues.some(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisPromise"]) ? Promise.all(syncAsyncValues) : (syncAsyncValues);
     }
@@ -11636,7 +11666,7 @@ function identifierName(compileIdentifier) {
     if (ref['__anonymousType']) {
         return ref['__anonymousType'];
     }
-    var /** @type {?} */ identifier = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(ref);
+    var /** @type {?} */ identifier = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(ref);
     if (identifier.indexOf('(') >= 0) {
         // case: anonymous functions!
         identifier = "anonymous_" + _anonymousTypeIndex++;
@@ -11657,7 +11687,7 @@ function identifierModuleUrl(compileIdentifier) {
         return ref.filePath;
     }
     // Runtime type
-    return "./" + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(ref);
+    return "./" + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(ref);
 }
 /**
  * @param {?} compType
@@ -11739,7 +11769,7 @@ var CompileTemplateMetadata = (function () {
      * @param {?} __0
      */
     function CompileTemplateMetadata(_a) {
-        var encapsulation = _a.encapsulation, template = _a.template, templateUrl = _a.templateUrl, styles = _a.styles, styleUrls = _a.styleUrls, externalStylesheets = _a.externalStylesheets, animations = _a.animations, ngContentSelectors = _a.ngContentSelectors, interpolation = _a.interpolation, isInline = _a.isInline;
+        var encapsulation = _a.encapsulation, template = _a.template, templateUrl = _a.templateUrl, styles = _a.styles, styleUrls = _a.styleUrls, externalStylesheets = _a.externalStylesheets, animations = _a.animations, ngContentSelectors = _a.ngContentSelectors, interpolation = _a.interpolation, isInline = _a.isInline, preserveWhitespaces = _a.preserveWhitespaces;
         this.encapsulation = encapsulation;
         this.template = template;
         this.templateUrl = templateUrl;
@@ -11753,6 +11783,7 @@ var CompileTemplateMetadata = (function () {
         }
         this.interpolation = interpolation;
         this.isInline = isInline;
+        this.preserveWhitespaces = preserveWhitespaces;
     }
     /**
      * @return {?}
@@ -11909,7 +11940,8 @@ function createHostComponentMeta(hostTypeReference, compMeta, hostViewType) {
             animations: [],
             isInline: true,
             externalStylesheets: [],
-            interpolation: null
+            interpolation: null,
+            preserveWhitespaces: false,
         }),
         exportAs: null,
         changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ChangeDetectionStrategy"].Default,
@@ -12237,14 +12269,24 @@ var CompilerConfig = (function () {
      * @param {?=} __0
      */
     function CompilerConfig(_a) {
-        var _b = _a === void 0 ? {} : _a, _c = _b.defaultEncapsulation, defaultEncapsulation = _c === void 0 ? __WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewEncapsulation"].Emulated : _c, _d = _b.useJit, useJit = _d === void 0 ? true : _d, missingTranslation = _b.missingTranslation, enableLegacyTemplate = _b.enableLegacyTemplate;
+        var _b = _a === void 0 ? {} : _a, _c = _b.defaultEncapsulation, defaultEncapsulation = _c === void 0 ? __WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewEncapsulation"].Emulated : _c, _d = _b.useJit, useJit = _d === void 0 ? true : _d, missingTranslation = _b.missingTranslation, enableLegacyTemplate = _b.enableLegacyTemplate, preserveWhitespaces = _b.preserveWhitespaces;
         this.defaultEncapsulation = defaultEncapsulation;
         this.useJit = !!useJit;
         this.missingTranslation = missingTranslation || null;
         this.enableLegacyTemplate = enableLegacyTemplate !== false;
+        this.preserveWhitespaces = preserveWhitespacesDefault(noUndefined(preserveWhitespaces));
     }
     return CompilerConfig;
 }());
+/**
+ * @param {?} preserveWhitespacesOption
+ * @param {?=} defaultSetting
+ * @return {?}
+ */
+function preserveWhitespacesDefault(preserveWhitespacesOption, defaultSetting) {
+    if (defaultSetting === void 0) { defaultSetting = true; }
+    return preserveWhitespacesOption === null ? defaultSetting : preserveWhitespacesOption;
+}
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -13615,7 +13657,7 @@ function CompilerInjectable() {
  * @return {?}
  */
 function assertArrayOfStrings(identifier, value) {
-    if (!__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])() || value == null) {
+    if (!Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])() || value == null) {
         return;
     }
     if (!Array.isArray(value)) {
@@ -13643,7 +13685,7 @@ function assertInterpolationSymbols(identifier, value) {
     if (value != null && !(Array.isArray(value) && value.length == 2)) {
         throw new Error("Expected '" + identifier + "' to be an array, [start, end].");
     }
-    else if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])() && value != null) {
+    else if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])() && value != null) {
         var /** @type {?} */ start_1 = (value[0]);
         var /** @type {?} */ end_1 = (value[1]);
         // black list checking
@@ -16703,7 +16745,7 @@ function isExpansionFormStart(input, offset, interpolationConfig) {
  * @return {?}
  */
 function isExpansionCaseStart(peek) {
-    return peek === $EQ || isAsciiLetter(peek);
+    return peek === $EQ || isAsciiLetter(peek) || isDigit(peek);
 }
 /**
  * @param {?} code1
@@ -17003,11 +17045,9 @@ var _TreeBuilder = (function () {
      * @return {?}
      */
     _TreeBuilder.prototype._closeVoidElement = function () {
-        if (this._elementStack.length > 0) {
-            var /** @type {?} */ el = this._elementStack[this._elementStack.length - 1];
-            if (this.getTagDefinition(el.name).isVoid) {
-                this._elementStack.pop();
-            }
+        var /** @type {?} */ el = this._getParentElement();
+        if (el && this.getTagDefinition(el.name).isVoid) {
+            this._elementStack.pop();
         }
     };
     /**
@@ -17051,11 +17091,9 @@ var _TreeBuilder = (function () {
      * @return {?}
      */
     _TreeBuilder.prototype._pushElement = function (el) {
-        if (this._elementStack.length > 0) {
-            var /** @type {?} */ parentEl = this._elementStack[this._elementStack.length - 1];
-            if (this.getTagDefinition(parentEl.name).isClosedByChild(el.name)) {
-                this._elementStack.pop();
-            }
+        var /** @type {?} */ parentEl = this._getParentElement();
+        if (parentEl && this.getTagDefinition(parentEl.name).isClosedByChild(el.name)) {
+            this._elementStack.pop();
         }
         var /** @type {?} */ tagDef = this.getTagDefinition(el.name);
         var _a = this._getParentElementSkippingContainers(), parent = _a.parent, container = _a.container;
@@ -17137,7 +17175,7 @@ var _TreeBuilder = (function () {
             }
             container = this._elementStack[i];
         }
-        return { parent: this._elementStack[this._elementStack.length - 1], container: container };
+        return { parent: null, container: container };
     };
     /**
      * @param {?} node
@@ -19647,8 +19685,9 @@ var _WriteVisitor$1 = (function () {
      * @return {?}
      */
     _WriteVisitor$1.prototype.visitPlaceholder = function (ph, context) {
+        var /** @type {?} */ idStr = (this._nextPlaceholderId++).toString();
         return [new Tag(_PLACEHOLDER_TAG$1, {
-                id: (this._nextPlaceholderId++).toString(),
+                id: idStr,
                 equiv: ph.name,
                 disp: "{{" + ph.value + "}}",
             })];
@@ -19659,7 +19698,9 @@ var _WriteVisitor$1 = (function () {
      * @return {?}
      */
     _WriteVisitor$1.prototype.visitIcuPlaceholder = function (ph, context) {
-        return [new Tag(_PLACEHOLDER_TAG$1, { id: (this._nextPlaceholderId++).toString() })];
+        var /** @type {?} */ cases = Object.keys(ph.value.cases).map(function (value) { return value + ' {...}'; }).join(' ');
+        var /** @type {?} */ idStr = (this._nextPlaceholderId++).toString();
+        return [new Tag(_PLACEHOLDER_TAG$1, { id: idStr, equiv: ph.name, disp: "{" + ph.value.expression + ", " + ph.value.type + ", " + cases + "}" })];
     };
     /**
      * @param {?} nodes
@@ -20862,6 +20903,111 @@ function createTokenForExternalReference(reflector, reference) {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
+var PRESERVE_WS_ATTR_NAME = 'ngPreserveWhitespaces';
+var SKIP_WS_TRIM_TAGS = new Set(['pre', 'template', 'textarea', 'script', 'style']);
+/**
+ * @param {?} attrs
+ * @return {?}
+ */
+function hasPreserveWhitespacesAttr(attrs) {
+    return attrs.some(function (attr) { return attr.name === PRESERVE_WS_ATTR_NAME; });
+}
+/**
+ * Angular Dart introduced &ngsp; as a placeholder for non-removable space, see:
+ * https://github.com/dart-lang/angular/blob/0bb611387d29d65b5af7f9d2515ab571fd3fbee4/_tests/test/compiler/preserve_whitespace_test.dart#L25-L32
+ * In Angular Dart &ngsp; is converted to the 0xE500 PUA (Private Use Areas) unicode character
+ * and later on replaced by a space. We are re-implementing the same idea here.
+ * @param {?} value
+ * @return {?}
+ */
+function replaceNgsp(value) {
+    // lexer is replacing the &ngsp; pseudo-entity with NGSP_UNICODE
+    return value.replace(new RegExp(NGSP_UNICODE, 'g'), ' ');
+}
+/**
+ * This visitor can walk HTML parse tree and remove / trim text nodes using the following rules:
+ * - consider spaces, tabs and new lines as whitespace characters;
+ * - drop text nodes consisting of whitespace characters only;
+ * - for all other text nodes replace consecutive whitespace characters with one space;
+ * - convert &ngsp; pseudo-entity to a single space;
+ *
+ * Removal and trimming of whitespaces have positive performance impact (less code to generate
+ * while compiling templates, faster view creation). At the same time it can be "destructive"
+ * in some cases (whitespaces can influence layout). Because of the potential of breaking layout
+ * this visitor is not activated by default in Angular 4 and people need to explicitly opt-in for
+ * whitespace removal. The default option for whitespace removal will be revisited post Angular 5
+ * and might be changed to "on" by default.
+ */
+var WhitespaceVisitor = (function () {
+    function WhitespaceVisitor() {
+    }
+    /**
+     * @param {?} element
+     * @param {?} context
+     * @return {?}
+     */
+    WhitespaceVisitor.prototype.visitElement = function (element, context) {
+        if (SKIP_WS_TRIM_TAGS.has(element.name) || hasPreserveWhitespacesAttr(element.attrs)) {
+            // don't descent into elements where we need to preserve whitespaces
+            // but still visit all attributes to eliminate one used as a market to preserve WS
+            return new Element(element.name, visitAll(this, element.attrs), element.children, element.sourceSpan, element.startSourceSpan, element.endSourceSpan);
+        }
+        return new Element(element.name, element.attrs, visitAll(this, element.children), element.sourceSpan, element.startSourceSpan, element.endSourceSpan);
+    };
+    /**
+     * @param {?} attribute
+     * @param {?} context
+     * @return {?}
+     */
+    WhitespaceVisitor.prototype.visitAttribute = function (attribute, context) {
+        return attribute.name !== PRESERVE_WS_ATTR_NAME ? attribute : null;
+    };
+    /**
+     * @param {?} text
+     * @param {?} context
+     * @return {?}
+     */
+    WhitespaceVisitor.prototype.visitText = function (text, context) {
+        var /** @type {?} */ isBlank = text.value.trim().length === 0;
+        if (!isBlank) {
+            return new Text(replaceNgsp(text.value).replace(/\s\s+/g, ' '), text.sourceSpan);
+        }
+        return null;
+    };
+    /**
+     * @param {?} comment
+     * @param {?} context
+     * @return {?}
+     */
+    WhitespaceVisitor.prototype.visitComment = function (comment, context) { return comment; };
+    /**
+     * @param {?} expansion
+     * @param {?} context
+     * @return {?}
+     */
+    WhitespaceVisitor.prototype.visitExpansion = function (expansion, context) { return expansion; };
+    /**
+     * @param {?} expansionCase
+     * @param {?} context
+     * @return {?}
+     */
+    WhitespaceVisitor.prototype.visitExpansionCase = function (expansionCase, context) { return expansionCase; };
+    return WhitespaceVisitor;
+}());
+/**
+ * @param {?} htmlAstWithErrors
+ * @return {?}
+ */
+function removeWhitespaces(htmlAstWithErrors) {
+    return new ParseTreeResult(visitAll(new WhitespaceVisitor(), htmlAstWithErrors.rootNodes), htmlAstWithErrors.errors);
+}
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
 // http://cldr.unicode.org/index/cldr-spec/plural-rules
 var PLURAL_CASES = ['zero', 'one', 'two', 'few', 'many', 'other'];
 /**
@@ -21748,7 +21894,7 @@ function extractStyleUrls(resolver, baseUrl, cssText) {
     return new StyleWithImports(modifiedCssText, foundUrls);
 }
 var CSS_IMPORT_REGEXP = /@import\s+(?:url\()?\s*(?:(?:['"]([^'"]*))|([^;\)\s]*))[^;]*;?/g;
-var CSS_COMMENT_REGEXP = /\/\*.+?\*\//g;
+var CSS_COMMENT_REGEXP = /\/\*[\s\S]+?\*\//g;
 var URL_WITH_SCHEMA_REGEXP = /^([^:/?#]+):/;
 /**
  * @license
@@ -22029,7 +22175,7 @@ var BindingParser = (function () {
         // This will occur when a @trigger is not paired with an expression.
         // For animations it is valid to not have an expression since */void
         // states will be applied by angular when the element is attached/detached
-        var /** @type {?} */ ast = this._parseBinding(expression || 'null', false, sourceSpan);
+        var /** @type {?} */ ast = this._parseBinding(expression || 'undefined', false, sourceSpan);
         targetMatchableAttrs.push([name, /** @type {?} */ ((ast.source))]);
         targetProps.push(new BoundProperty(name, ast, BoundPropertyType.ANIMATION, sourceSpan));
     };
@@ -22502,10 +22648,11 @@ var TemplateParser = (function () {
      * @param {?} pipes
      * @param {?} schemas
      * @param {?} templateUrl
+     * @param {?} preserveWhitespaces
      * @return {?}
      */
-    TemplateParser.prototype.parse = function (component, template, directives, pipes, schemas, templateUrl) {
-        var /** @type {?} */ result = this.tryParse(component, template, directives, pipes, schemas, templateUrl);
+    TemplateParser.prototype.parse = function (component, template, directives, pipes, schemas, templateUrl, preserveWhitespaces) {
+        var /** @type {?} */ result = this.tryParse(component, template, directives, pipes, schemas, templateUrl, preserveWhitespaces);
         var /** @type {?} */ warnings = ((result.errors)).filter(function (error) { return error.level === ParseErrorLevel.WARNING; })
             .filter(warnOnlyOnce([TEMPLATE_ATTR_DEPRECATION_WARNING, TEMPLATE_ELEMENT_DEPRECATION_WARNING]));
         var /** @type {?} */ errors = ((result.errors)).filter(function (error) { return error.level === ParseErrorLevel.ERROR; });
@@ -22525,10 +22672,15 @@ var TemplateParser = (function () {
      * @param {?} pipes
      * @param {?} schemas
      * @param {?} templateUrl
+     * @param {?} preserveWhitespaces
      * @return {?}
      */
-    TemplateParser.prototype.tryParse = function (component, template, directives, pipes, schemas, templateUrl) {
-        return this.tryParseHtml(this.expandHtml(/** @type {?} */ ((this._htmlParser)).parse(template, templateUrl, true, this.getInterpolationConfig(component))), component, directives, pipes, schemas);
+    TemplateParser.prototype.tryParse = function (component, template, directives, pipes, schemas, templateUrl, preserveWhitespaces) {
+        var /** @type {?} */ htmlParseResult = ((this._htmlParser)).parse(template, templateUrl, true, this.getInterpolationConfig(component));
+        if (!preserveWhitespaces) {
+            htmlParseResult = removeWhitespaces(htmlParseResult);
+        }
+        return this.tryParseHtml(this.expandHtml(htmlParseResult), component, directives, pipes, schemas);
     };
     /**
      * @param {?} htmlAstWithErrors
@@ -22684,9 +22836,10 @@ var TemplateParseVisitor = (function () {
      */
     TemplateParseVisitor.prototype.visitText = function (text, parent) {
         var /** @type {?} */ ngContentIndex = ((parent.findNgContentIndex(TEXT_CSS_SELECTOR)));
-        var /** @type {?} */ expr = this._bindingParser.parseInterpolation(text.value, /** @type {?} */ ((text.sourceSpan)));
+        var /** @type {?} */ valueNoNgsp = replaceNgsp(text.value);
+        var /** @type {?} */ expr = this._bindingParser.parseInterpolation(valueNoNgsp, /** @type {?} */ ((text.sourceSpan)));
         return expr ? new BoundTextAst(expr, ngContentIndex, /** @type {?} */ ((text.sourceSpan))) :
-            new TextAst(text.value, ngContentIndex, /** @type {?} */ ((text.sourceSpan)));
+            new TextAst(valueNoNgsp, ngContentIndex, /** @type {?} */ ((text.sourceSpan)));
     };
     /**
      * @param {?} attribute
@@ -22968,7 +23121,7 @@ var TemplateParseVisitor = (function () {
             _this._createDirectivePropertyAsts(directive.inputs, props, directiveProperties, targetBoundDirectivePropNames);
             elementOrDirectiveRefs.forEach(function (elOrDirRef) {
                 if ((elOrDirRef.value.length === 0 && directive.isComponent) ||
-                    (directive.exportAs == elOrDirRef.value)) {
+                    (elOrDirRef.isReferenceToDirective(directive))) {
                     targetReferences.push(new ReferenceAst(elOrDirRef.name, createTokenForReference(directive.type.reference), elOrDirRef.sourceSpan));
                     matchedReferences.add(elOrDirRef.name);
                 }
@@ -23232,6 +23385,13 @@ var NonBindableVisitor = (function () {
     NonBindableVisitor.prototype.visitExpansionCase = function (expansionCase, context) { return expansionCase; };
     return NonBindableVisitor;
 }());
+/**
+ * A reference to an element or directive in a template. E.g., the reference in this template:
+ *
+ * <div #myMenu="coolMenu">
+ *
+ * would be {name: 'myMenu', value: 'coolMenu', sourceSpan: ...}
+ */
 var ElementOrDirectiveRef = (function () {
     /**
      * @param {?} name
@@ -23243,8 +23403,24 @@ var ElementOrDirectiveRef = (function () {
         this.value = value;
         this.sourceSpan = sourceSpan;
     }
+    /**
+     * Gets whether this is a reference to the given directive.
+     * @param {?} directive
+     * @return {?}
+     */
+    ElementOrDirectiveRef.prototype.isReferenceToDirective = function (directive) {
+        return splitExportAs(directive.exportAs).indexOf(this.value) !== -1;
+    };
     return ElementOrDirectiveRef;
 }());
+/**
+ * Splits a raw, potentially comma-delimted `exportAs` value into an array of names.
+ * @param {?} exportAs
+ * @return {?}
+ */
+function splitExportAs(exportAs) {
+    return exportAs ? exportAs.split(',').map(function (e) { return e.trim(); }) : [];
+}
 /**
  * @param {?} classAttrValue
  * @return {?}
@@ -23786,19 +23962,23 @@ var DirectiveNormalizer = (function () {
         var _this = this;
         if (isDefined(prenormData.template)) {
             if (isDefined(prenormData.templateUrl)) {
-                throw syntaxError("'" + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(prenormData.componentType) + "' component cannot define both template and templateUrl");
+                throw syntaxError("'" + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(prenormData.componentType) + "' component cannot define both template and templateUrl");
             }
             if (typeof prenormData.template !== 'string') {
-                throw syntaxError("The template specified for component " + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(prenormData.componentType) + " is not a string");
+                throw syntaxError("The template specified for component " + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(prenormData.componentType) + " is not a string");
             }
         }
         else if (isDefined(prenormData.templateUrl)) {
             if (typeof prenormData.templateUrl !== 'string') {
-                throw syntaxError("The templateUrl specified for component " + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(prenormData.componentType) + " is not a string");
+                throw syntaxError("The templateUrl specified for component " + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(prenormData.componentType) + " is not a string");
             }
         }
         else {
-            throw syntaxError("No template specified for component " + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(prenormData.componentType));
+            throw syntaxError("No template specified for component " + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(prenormData.componentType));
+        }
+        if (isDefined(prenormData.preserveWhitespaces) &&
+            typeof prenormData.preserveWhitespaces !== 'boolean') {
+            throw syntaxError("The preserveWhitespaces option for component " + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(prenormData.componentType) + " must be a boolean");
         }
         return SyncAsync.then(this.normalizeTemplateOnly(prenormData), function (result) { return _this.normalizeExternalStylesheets(result); });
     };
@@ -23859,7 +24039,8 @@ var DirectiveNormalizer = (function () {
             ngContentSelectors: visitor.ngContentSelectors,
             animations: prenormData.animations,
             interpolation: prenormData.interpolation, isInline: isInline,
-            externalStylesheets: []
+            externalStylesheets: [],
+            preserveWhitespaces: preserveWhitespacesDefault(prenormData.preserveWhitespaces, this._config.preserveWhitespaces),
         });
     };
     /**
@@ -23878,6 +24059,7 @@ var DirectiveNormalizer = (function () {
             animations: templateMeta.animations,
             interpolation: templateMeta.interpolation,
             isInline: templateMeta.isInline,
+            preserveWhitespaces: templateMeta.preserveWhitespaces,
         }); });
     };
     /**
@@ -24022,7 +24204,7 @@ var DirectiveResolver = (function () {
      * @return {?}
      */
     DirectiveResolver.prototype.isDirective = function (type) {
-        var /** @type {?} */ typeMetadata = this._reflector.annotations(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(type));
+        var /** @type {?} */ typeMetadata = this._reflector.annotations(Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(type));
         return typeMetadata && typeMetadata.some(isDirectiveMetadata);
     };
     /**
@@ -24032,7 +24214,7 @@ var DirectiveResolver = (function () {
      */
     DirectiveResolver.prototype.resolve = function (type, throwIfNotFound) {
         if (throwIfNotFound === void 0) { throwIfNotFound = true; }
-        var /** @type {?} */ typeMetadata = this._reflector.annotations(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(type));
+        var /** @type {?} */ typeMetadata = this._reflector.annotations(Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(type));
         if (typeMetadata) {
             var /** @type {?} */ metadata = findLast(typeMetadata, isDirectiveMetadata);
             if (metadata) {
@@ -24041,7 +24223,7 @@ var DirectiveResolver = (function () {
             }
         }
         if (throwIfNotFound) {
-            throw new Error("No Directive annotation found on " + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(type));
+            throw new Error("No Directive annotation found on " + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(type));
         }
         return null;
     };
@@ -24159,7 +24341,8 @@ var DirectiveResolver = (function () {
                 styleUrls: directive.styleUrls,
                 encapsulation: directive.encapsulation,
                 animations: directive.animations,
-                interpolation: directive.interpolation
+                interpolation: directive.interpolation,
+                preserveWhitespaces: directive.preserveWhitespaces,
             });
         }
         else {
@@ -24408,7 +24591,7 @@ var NgModuleResolver = (function () {
         }
         else {
             if (throwIfNotFound) {
-                throw new Error("No NgModule metadata found for '" + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(type) + "'.");
+                throw new Error("No NgModule metadata found for '" + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(type) + "'.");
             }
             return null;
         }
@@ -24457,7 +24640,7 @@ var PipeResolver = (function () {
      * @return {?}
      */
     PipeResolver.prototype.isPipe = function (type) {
-        var /** @type {?} */ typeMetadata = this._reflector.annotations(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(type));
+        var /** @type {?} */ typeMetadata = this._reflector.annotations(Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(type));
         return typeMetadata && typeMetadata.some(_isPipeMetadata);
     };
     /**
@@ -24468,7 +24651,7 @@ var PipeResolver = (function () {
      */
     PipeResolver.prototype.resolve = function (type, throwIfNotFound) {
         if (throwIfNotFound === void 0) { throwIfNotFound = true; }
-        var /** @type {?} */ metas = this._reflector.annotations(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(type));
+        var /** @type {?} */ metas = this._reflector.annotations(Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(type));
         if (metas) {
             var /** @type {?} */ annotation = findLast(metas, _isPipeMetadata);
             if (annotation) {
@@ -24476,7 +24659,7 @@ var PipeResolver = (function () {
             }
         }
         if (throwIfNotFound) {
-            throw new Error("No Pipe decorator found on " + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(type));
+            throw new Error("No Pipe decorator found on " + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(type));
         }
         return null;
     };
@@ -24673,7 +24856,7 @@ var CompileMetadataResolver = (function () {
         var /** @type {?} */ delegate = null;
         var /** @type {?} */ proxyClass = (function () {
             if (!delegate) {
-                throw new Error("Illegal state: Class " + name + " for type " + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(baseType) + " is not compiled yet!");
+                throw new Error("Illegal state: Class " + name + " for type " + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(baseType) + " is not compiled yet!");
             }
             return delegate.apply(this, arguments);
         });
@@ -24756,7 +24939,7 @@ var CompileMetadataResolver = (function () {
             var /** @type {?} */ hostView = this.getHostComponentViewClass(dirType);
             // Note: ngContentSelectors will be filled later once the template is
             // loaded.
-            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵccf"])(selector, dirType, /** @type {?} */ (hostView), inputs, outputs, []);
+            return Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵccf"])(selector, dirType, /** @type {?} */ (hostView), inputs, outputs, []);
         }
     };
     /**
@@ -24795,7 +24978,7 @@ var CompileMetadataResolver = (function () {
         if (this._directiveCache.has(directiveType)) {
             return null;
         }
-        directiveType = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(directiveType);
+        directiveType = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(directiveType);
         var _a = ((this.getNonNormalizedDirectiveMetadata(directiveType))), annotation = _a.annotation, metadata = _a.metadata;
         var /** @type {?} */ createDirectiveMetadata = function (templateMetadata) {
             var /** @type {?} */ normalizedDirMeta = new CompileDirectiveMetadata({
@@ -24839,9 +25022,10 @@ var CompileMetadataResolver = (function () {
                 styles: template.styles,
                 styleUrls: template.styleUrls,
                 animations: template.animations,
-                interpolation: template.interpolation
+                interpolation: template.interpolation,
+                preserveWhitespaces: template.preserveWhitespaces
             });
-            if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisPromise"])(templateMeta) && isSync) {
+            if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisPromise"])(templateMeta) && isSync) {
                 this._reportError(componentStillLoadingError(directiveType), directiveType);
                 return null;
             }
@@ -24859,7 +25043,7 @@ var CompileMetadataResolver = (function () {
      */
     CompileMetadataResolver.prototype.getNonNormalizedDirectiveMetadata = function (directiveType) {
         var _this = this;
-        directiveType = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(directiveType);
+        directiveType = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(directiveType);
         if (!directiveType) {
             return null;
         }
@@ -24888,7 +25072,8 @@ var CompileMetadataResolver = (function () {
                 interpolation: noUndefined(dirMeta.interpolation),
                 isInline: !!dirMeta.template,
                 externalStylesheets: [],
-                ngContentSelectors: []
+                ngContentSelectors: [],
+                preserveWhitespaces: noUndefined(dirMeta.preserveWhitespaces),
             });
         }
         var /** @type {?} */ changeDetectionStrategy = ((null));
@@ -25050,7 +25235,7 @@ var CompileMetadataResolver = (function () {
     CompileMetadataResolver.prototype.getNgModuleMetadata = function (moduleType, throwIfNotFound) {
         var _this = this;
         if (throwIfNotFound === void 0) { throwIfNotFound = true; }
-        moduleType = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(moduleType);
+        moduleType = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(moduleType);
         var /** @type {?} */ compileMeta = this._ngModuleCache.get(moduleType);
         if (compileMeta) {
             return compileMeta;
@@ -25289,7 +25474,7 @@ var CompileMetadataResolver = (function () {
      * @return {?}
      */
     CompileMetadataResolver.prototype._getIdentifierMetadata = function (type) {
-        type = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(type);
+        type = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(type);
         return { reference: type };
     };
     /**
@@ -25348,7 +25533,7 @@ var CompileMetadataResolver = (function () {
      */
     CompileMetadataResolver.prototype._getFactoryMetadata = function (factory, dependencies) {
         if (dependencies === void 0) { dependencies = null; }
-        factory = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(factory);
+        factory = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(factory);
         return { reference: factory, diDeps: this._getDependenciesMetadata(factory, dependencies) };
     };
     /**
@@ -25391,7 +25576,7 @@ var CompileMetadataResolver = (function () {
      * @return {?}
      */
     CompileMetadataResolver.prototype._loadPipeMetadata = function (pipeType) {
-        pipeType = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(pipeType);
+        pipeType = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(pipeType);
         var /** @type {?} */ pipeAnnotation = ((this._pipeResolver.resolve(pipeType)));
         var /** @type {?} */ pipeMeta = new CompilePipeMetadata({
             type: this._getTypeMetadata(pipeType),
@@ -25482,7 +25667,7 @@ var CompileMetadataResolver = (function () {
      * @return {?}
      */
     CompileMetadataResolver.prototype._getTokenMetadata = function (token) {
-        token = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(token);
+        token = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(token);
         var /** @type {?} */ compileToken;
         if (typeof token === 'string') {
             compileToken = { value: token };
@@ -25508,7 +25693,7 @@ var CompileMetadataResolver = (function () {
                 _this._getProvidersMetadata(provider, targetEntryComponents, debugInfo, compileProviders);
             }
             else {
-                provider = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(provider);
+                provider = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(provider);
                 var /** @type {?} */ providerMeta = ((undefined));
                 if (provider && typeof provider === 'object' && provider.hasOwnProperty('provide')) {
                     _this._validateProvider(provider);
@@ -25733,7 +25918,7 @@ function flattenArray(tree, out) {
     if (out === void 0) { out = []; }
     if (tree) {
         for (var /** @type {?} */ i = 0; i < tree.length; i++) {
-            var /** @type {?} */ item = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(tree[i]);
+            var /** @type {?} */ item = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["resolveForwardRef"])(tree[i]);
             if (Array.isArray(item)) {
                 flattenArray(item, out);
             }
@@ -25800,7 +25985,7 @@ function stringifyType(type) {
         return type.name + " in " + type.filePath;
     }
     else {
-        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(type);
+        return Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(type);
     }
 }
 /**
@@ -25809,7 +25994,7 @@ function stringifyType(type) {
  * @return {?}
  */
 function componentStillLoadingError(compType) {
-    var /** @type {?} */ error = Error("Can't compile synchronously as " + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(compType) + " is still being loaded!");
+    var /** @type {?} */ error = Error("Can't compile synchronously as " + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(compType) + " is still being loaded!");
     ((error))[__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵERROR_COMPONENT_TYPE"]] = compType;
     return error;
 }
@@ -32227,12 +32412,12 @@ var ViewBuilder = (function () {
         var /** @type {?} */ usedEvents = new Map();
         ast.outputs.forEach(function (event) {
             var _a = elementEventNameAndTarget(event, null), name = _a.name, target = _a.target;
-            usedEvents.set(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵelementEventFullName"])(target, name), [target, name]);
+            usedEvents.set(Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵelementEventFullName"])(target, name), [target, name]);
         });
         ast.directives.forEach(function (dirAst) {
             dirAst.hostEvents.forEach(function (event) {
                 var _a = elementEventNameAndTarget(event, dirAst), name = _a.name, target = _a.target;
-                usedEvents.set(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵelementEventFullName"])(target, name), [target, name]);
+                usedEvents.set(Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵelementEventFullName"])(target, name), [target, name]);
             });
         });
         var /** @type {?} */ hostBindings = [];
@@ -32677,7 +32862,7 @@ var ViewBuilder = (function () {
                 trueStmts.push(ALLOW_DEFAULT_VAR.set(allowDefault.and(ALLOW_DEFAULT_VAR)).toStmt());
             }
             var _c = elementEventNameAndTarget(eventAst, dirAst), eventTarget = _c.target, eventName = _c.name;
-            var /** @type {?} */ fullEventName = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵelementEventFullName"])(eventTarget, eventName);
+            var /** @type {?} */ fullEventName = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵelementEventFullName"])(eventTarget, eventName);
             handleEventStmts.push(applySourceSpanToStatementIfNeeded(new IfStmt(literal(fullEventName).identical(EVENT_NAME_VAR), trueStmts), eventAst.sourceSpan));
         });
         var /** @type {?} */ handleEventFn;
@@ -33636,9 +33821,10 @@ var AotCompiler = (function () {
         var /** @type {?} */ ngModule = ((this._metadataResolver.getNgModuleMetadata(ngModuleType)));
         var /** @type {?} */ providers = [];
         if (this._localeId) {
+            var /** @type {?} */ normalizedLocale = this._localeId.replace(/_/g, '-');
             providers.push({
                 token: createTokenForExternalReference(this._reflector, Identifiers.LOCALE_ID),
-                useValue: this._localeId,
+                useValue: normalizedLocale,
             });
         }
         if (this._translationFormat) {
@@ -33696,7 +33882,8 @@ var AotCompiler = (function () {
         var _this = this;
         var /** @type {?} */ directives = directiveIdentifiers.map(function (dir) { return _this._metadataResolver.getDirectiveSummary(dir.reference); });
         var /** @type {?} */ pipes = ngModule.transitiveModule.pipes.map(function (pipe) { return _this._metadataResolver.getPipeSummary(pipe.reference); });
-        var _a = this._templateParser.parse(compMeta, /** @type {?} */ ((((compMeta.template)).template)), directives, pipes, ngModule.schemas, templateSourceUrl(ngModule.type, compMeta, /** @type {?} */ ((compMeta.template)))), parsedTemplate = _a.template, usedPipes = _a.pipes;
+        var /** @type {?} */ preserveWhitespaces = ((((compMeta)).template)).preserveWhitespaces;
+        var _a = this._templateParser.parse(compMeta, /** @type {?} */ ((((compMeta.template)).template)), directives, pipes, ngModule.schemas, templateSourceUrl(ngModule.type, compMeta, /** @type {?} */ ((compMeta.template))), preserveWhitespaces), parsedTemplate = _a.template, usedPipes = _a.pipes;
         var /** @type {?} */ stylesExpr = componentStyles ? variable(componentStyles.stylesVar) : literalArr([]);
         var /** @type {?} */ viewResult = this._viewCompiler.compileComponent(outputCtx, compMeta, parsedTemplate, stylesExpr, usedPipes);
         if (componentStyles) {
@@ -35425,6 +35612,7 @@ function createAotCompiler(compilerHost, options) {
         useJit: false,
         enableLegacyTemplate: options.enableLegacyTemplate !== false,
         missingTranslation: options.missingTranslation,
+        preserveWhitespaces: options.preserveWhitespaces,
     });
     var /** @type {?} */ normalizer = new DirectiveNormalizer({ get: function (url) { return compilerHost.loadResource(url); } }, urlResolver, htmlParser, config);
     var /** @type {?} */ expressionParser = new Parser(new Lexer());
@@ -36232,7 +36420,7 @@ function evalExpression(sourceUrl$$1, ctx, vars) {
         fnArgNames.push(argName);
         fnArgValues.push(vars[argName]);
     }
-    if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])()) {
+    if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])()) {
         // using `new Function(...)` generates a header, 1 line of no arguments, 2 lines otherwise
         // E.g. ```
         // function anonymous(a,b,c
@@ -36427,7 +36615,7 @@ var JitCompiler = (function () {
         this._console.warn('Compiler.getNgContentSelectors is deprecated. Use ComponentFactory.ngContentSelectors instead!');
         var /** @type {?} */ template = this._compiledTemplateCache.get(component);
         if (!template) {
-            throw new Error("The component " + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(component) + " is not yet compiled!");
+            throw new Error("The component " + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(component) + " is not yet compiled!");
         }
         return ((template.compMeta.template)).ngContentSelectors;
     };
@@ -36617,7 +36805,7 @@ var JitCompiler = (function () {
      */
     JitCompiler.prototype._createCompiledHostTemplate = function (compType, ngModule) {
         if (!ngModule) {
-            throw new Error("Component " + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(compType) + " is not part of any NgModule or the module has not been imported into your module.");
+            throw new Error("Component " + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(compType) + " is not part of any NgModule or the module has not been imported into your module.");
         }
         var /** @type {?} */ compiledTemplate = this._compiledHostTemplateCache.get(compType);
         if (!compiledTemplate) {
@@ -36625,7 +36813,7 @@ var JitCompiler = (function () {
             assertComponent(compMeta);
             var /** @type {?} */ componentFactory = (compMeta.componentFactory);
             var /** @type {?} */ hostClass = this._metadataResolver.getHostComponentType(compType);
-            var /** @type {?} */ hostMeta = createHostComponentMeta(hostClass, compMeta, /** @type {?} */ (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵgetComponentViewDefinitionFactory"])(componentFactory)));
+            var /** @type {?} */ hostMeta = createHostComponentMeta(hostClass, compMeta, /** @type {?} */ (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵgetComponentViewDefinitionFactory"])(componentFactory)));
             compiledTemplate =
                 new CompiledTemplate(true, compMeta.type, hostMeta, ngModule, [compMeta.type]);
             this._compiledHostTemplateCache.set(compType, compiledTemplate);
@@ -36658,7 +36846,8 @@ var JitCompiler = (function () {
         var /** @type {?} */ compMeta = template.compMeta;
         var /** @type {?} */ externalStylesheetsByModuleUrl = new Map();
         var /** @type {?} */ outputContext = createOutputContext();
-        var /** @type {?} */ componentStylesheet = this._styleCompiler.compileComponent(outputContext, compMeta); /** @type {?} */
+        var /** @type {?} */ componentStylesheet = this._styleCompiler.compileComponent(outputContext, compMeta);
+        var /** @type {?} */ preserveWhitespaces = ((((compMeta)).template)).preserveWhitespaces; /** @type {?} */
         ((compMeta.template)).externalStylesheets.forEach(function (stylesheetMeta) {
             var /** @type {?} */ compiledStylesheet = _this._styleCompiler.compileStyles(createOutputContext(), compMeta, stylesheetMeta);
             externalStylesheetsByModuleUrl.set(/** @type {?} */ ((stylesheetMeta.moduleUrl)), compiledStylesheet);
@@ -36666,7 +36855,7 @@ var JitCompiler = (function () {
         this._resolveStylesCompileResult(componentStylesheet, externalStylesheetsByModuleUrl);
         var /** @type {?} */ directives = template.directives.map(function (dir) { return _this._metadataResolver.getDirectiveSummary(dir.reference); });
         var /** @type {?} */ pipes = template.ngModule.transitiveModule.pipes.map(function (pipe) { return _this._metadataResolver.getPipeSummary(pipe.reference); });
-        var _a = this._templateParser.parse(compMeta, /** @type {?} */ ((((compMeta.template)).template)), directives, pipes, template.ngModule.schemas, templateSourceUrl(template.ngModule.type, template.compMeta, /** @type {?} */ ((template.compMeta.template)))), parsedTemplate = _a.template, usedPipes = _a.pipes;
+        var _a = this._templateParser.parse(compMeta, /** @type {?} */ ((((compMeta.template)).template)), directives, pipes, template.ngModule.schemas, templateSourceUrl(template.ngModule.type, template.compMeta, /** @type {?} */ ((template.compMeta.template))), preserveWhitespaces), parsedTemplate = _a.template, usedPipes = _a.pipes;
         var /** @type {?} */ compileResult = this._viewCompiler.compileComponent(outputContext, compMeta, parsedTemplate, variable(componentStylesheet.stylesVar), usedPipes);
         var /** @type {?} */ evalResult;
         if (!this._compilerConfig.useJit) {
@@ -37097,10 +37286,10 @@ var JitReflector = (function () {
             return scheme ? moduleId : "package:" + moduleId + MODULE_SUFFIX;
         }
         else if (moduleId !== null && moduleId !== void 0) {
-            throw syntaxError("moduleId should be a string in \"" + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(type) + "\". See https://goo.gl/wIDDiL for more information.\n" +
+            throw syntaxError("moduleId should be a string in \"" + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(type) + "\". See https://goo.gl/wIDDiL for more information.\n" +
                 "If you're using Webpack you should inline the template and the styles, see https://goo.gl/X2J8zc.");
         }
-        return "./" + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(type);
+        return "./" + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(type);
     };
     /**
      * @param {?} typeOrFunc
@@ -37213,11 +37402,12 @@ var JitCompilerFactory = (function () {
      */
     function JitCompilerFactory(defaultOptions) {
         var compilerOptions = {
-            useDebug: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])(),
+            useDebug: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])(),
             useJit: true,
             defaultEncapsulation: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewEncapsulation"].Emulated,
             missingTranslation: __WEBPACK_IMPORTED_MODULE_1__angular_core__["MissingTranslationStrategy"].Warning,
             enableLegacyTemplate: true,
+            preserveWhitespaces: true,
         };
         this._defaultOptions = [compilerOptions].concat(defaultOptions);
     }
@@ -37241,6 +37431,7 @@ var JitCompilerFactory = (function () {
                         defaultEncapsulation: opts.defaultEncapsulation,
                         missingTranslation: opts.missingTranslation,
                         enableLegacyTemplate: opts.enableLegacyTemplate,
+                        preserveWhitespaces: opts.preserveWhitespaces,
                     });
                 },
                 deps: []
@@ -37264,7 +37455,7 @@ JitCompilerFactory.ctorParameters = function () { return [
  *
  * \@experimental
  */
-var platformCoreDynamic = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["createPlatformFactory"])(__WEBPACK_IMPORTED_MODULE_1__angular_core__["platformCore"], 'coreDynamic', [
+var platformCoreDynamic = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["createPlatformFactory"])(__WEBPACK_IMPORTED_MODULE_1__angular_core__["platformCore"], 'coreDynamic', [
     { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["COMPILER_OPTIONS"], useValue: {}, multi: true },
     { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["CompilerFactory"], useClass: JitCompilerFactory },
 ]);
@@ -37279,6 +37470,7 @@ function _mergeOptions(optionsArr) {
         providers: _mergeArrays(optionsArr.map(function (options) { return ((options.providers)); })),
         missingTranslation: _lastDefined(optionsArr.map(function (options) { return options.missingTranslation; })),
         enableLegacyTemplate: _lastDefined(optionsArr.map(function (options) { return options.enableLegacyTemplate; })),
+        preserveWhitespaces: _lastDefined(optionsArr.map(function (options) { return options.preserveWhitespaces; })),
     };
 }
 /**
@@ -37349,17 +37541,8 @@ function _mergeArrays(parts) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global) {Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_merge__ = __webpack_require__("../../../../rxjs/observable/merge.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_merge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_observable_merge__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_share__ = __webpack_require__("../../../../rxjs/operator/share.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_share___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_share__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Class", function() { return Class; });
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Class", function() { return Class; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createPlatform", function() { return createPlatform; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "assertPlatform", function() { return assertPlatform; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyPlatform", function() { return destroyPlatform; });
@@ -37553,9 +37736,18 @@ function _mergeArrays(parts) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return makeParamDecorator; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵt", function() { return _def; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵu", function() { return DebugContext; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_merge__ = __webpack_require__("../../../../rxjs/observable/merge.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_merge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_observable_merge__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_share__ = __webpack_require__("../../../../rxjs/operator/share.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_share___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_share__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__);
 
 /**
- * @license Angular v4.3.1
+ * @license Angular v4.4.1
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -38351,7 +38543,7 @@ var Version = (function () {
 /**
  * \@stable
  */
-var VERSION = new Version('4.3.1');
+var VERSION = new Version('4.4.1');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -41464,7 +41656,7 @@ function forkInnerZoneWithAngularBehavior(zone) {
         },
         onHandleError: function (delegate, current, target, error) {
             delegate.handleError(target, error);
-            zone.onError.emit(error);
+            zone.runOutsideAngular(function () { return zone.onError.emit(error); });
             return false;
         }
     });
@@ -41952,15 +42144,16 @@ var PlatformRef = (function () {
 }());
 /**
  * @param {?} errorHandler
+ * @param {?} ngZone
  * @param {?} callback
  * @return {?}
  */
-function _callAndReportToErrorHandler(errorHandler, callback) {
+function _callAndReportToErrorHandler(errorHandler, ngZone, callback) {
     try {
         var /** @type {?} */ result = callback();
         if (isPromise(result)) {
             return result.catch(function (e) {
-                errorHandler.handleError(e);
+                ngZone.runOutsideAngular(function () { return errorHandler.handleError(e); });
                 // rethrow as the exception handler might not do it
                 throw e;
             });
@@ -41968,7 +42161,7 @@ function _callAndReportToErrorHandler(errorHandler, callback) {
         return result;
     }
     catch (e) {
-        errorHandler.handleError(e);
+        ngZone.runOutsideAngular(function () { return errorHandler.handleError(e); });
         // rethrow as the exception handler might not do it
         throw e;
     }
@@ -42054,8 +42247,8 @@ var PlatformRef_ = (function (_super) {
                 throw new Error('No ErrorHandler. Is platform module (BrowserModule) included?');
             }
             moduleRef.onDestroy(function () { return remove(_this._modules, moduleRef); }); /** @type {?} */
-            ((ngZone)).onError.subscribe({ next: function (error) { exceptionHandler.handleError(error); } });
-            return _callAndReportToErrorHandler(exceptionHandler, function () {
+            ((ngZone)).runOutsideAngular(function () { return ((ngZone)).onError.subscribe({ next: function (error) { exceptionHandler.handleError(error); } }); });
+            return _callAndReportToErrorHandler(exceptionHandler, /** @type {?} */ ((ngZone)), function () {
                 var /** @type {?} */ initStatus = moduleRef.injector.get(ApplicationInitStatus);
                 initStatus.runInitializers();
                 return initStatus.donePromise.then(function () {
@@ -42245,16 +42438,21 @@ var ApplicationRef_ = (function (_super) {
             });
         });
         var isStable = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"](function (observer) {
-            var stableSub = _this._zone.onStable.subscribe(function () {
-                NgZone.assertNotInAngularZone();
-                // Check whether there are no pending macro/micro tasks in the next tick
-                // to allow for NgZone to update the state.
-                scheduleMicroTask(function () {
-                    if (!_this._stable && !_this._zone.hasPendingMacrotasks &&
-                        !_this._zone.hasPendingMicrotasks) {
-                        _this._stable = true;
-                        observer.next(true);
-                    }
+            // Create the subscription to onStable outside the Angular Zone so that
+            // the callback is run outside the Angular Zone.
+            var stableSub;
+            _this._zone.runOutsideAngular(function () {
+                stableSub = _this._zone.onStable.subscribe(function () {
+                    NgZone.assertNotInAngularZone();
+                    // Check whether there are no pending macro/micro tasks in the next tick
+                    // to allow for NgZone to update the state.
+                    scheduleMicroTask(function () {
+                        if (!_this._stable && !_this._zone.hasPendingMacrotasks &&
+                            !_this._zone.hasPendingMicrotasks) {
+                            _this._stable = true;
+                            observer.next(true);
+                        }
+                    });
                 });
             });
             var unstableSub = _this._zone.onUnstable.subscribe(function () {
@@ -42269,7 +42467,7 @@ var ApplicationRef_ = (function (_super) {
                 unstableSub.unsubscribe();
             };
         });
-        _this._isStable = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_rxjs_observable_merge__["merge"])(isCurrentlyStable, __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_share__["share"].call(isStable));
+        _this._isStable = Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_observable_merge__["merge"])(isCurrentlyStable, __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_share__["share"].call(isStable));
         return _this;
     }
     /**
@@ -42351,6 +42549,7 @@ var ApplicationRef_ = (function (_super) {
      * @return {?}
      */
     ApplicationRef_.prototype.tick = function () {
+        var _this = this;
         if (this._runningTick) {
             throw new Error('ApplicationRef.tick is called recursively');
         }
@@ -42364,7 +42563,7 @@ var ApplicationRef_ = (function (_super) {
         }
         catch (e) {
             // Attention: Don't rethrow as it could cancel subscriptions to Observables!
-            this._exceptionHandler.handleError(e);
+            this._zone.runOutsideAngular(function () { return _this._exceptionHandler.handleError(e); });
         }
         finally {
             this._runningTick = false;
@@ -43127,6 +43326,14 @@ var QueryList = (function () {
         enumerable: true,
         configurable: true
     });
+    /**
+     * internal
+     * @return {?}
+     */
+    QueryList.prototype.destroy = function () {
+        this._emitter.complete();
+        this._emitter.unsubscribe();
+    };
     return QueryList;
 }());
 /**
@@ -43196,7 +43403,7 @@ var SystemJsNgModuleLoader = (function () {
         if (exportName === undefined) {
             exportName = 'default';
         }
-        return __webpack_require__("../../../../../src async recursive")(module)
+        return __webpack_require__("../../../../../src/$$_gendir lazy recursive")(module)
             .then(function (module) { return module[exportName]; })
             .then(function (type) { return checkNotEmpty(type, module, exportName); })
             .then(function (type) { return _this._compiler.compileModuleAsync(type); });
@@ -43212,7 +43419,7 @@ var SystemJsNgModuleLoader = (function () {
             exportName = 'default';
             factoryClassSuffix = '';
         }
-        return __webpack_require__("../../../../../src async recursive")(this._config.factoryPathPrefix + module + this._config.factoryPathSuffix)
+        return __webpack_require__("../../../../../src/$$_gendir lazy recursive")(this._config.factoryPathPrefix + module + this._config.factoryPathSuffix)
             .then(function (module) { return module[exportName + factoryClassSuffix]; })
             .then(function (factory) { return checkNotEmpty(factory, module, exportName); });
     };
@@ -43454,7 +43661,7 @@ var ChangeDetectorRef = (function () {
      *
      *   constructor(private ref: ChangeDetectorRef) {
      *     setInterval(() => {
-     *       this.numberOfTicks ++
+     *       this.numberOfTicks++;
      *       // the following is required, otherwise the view will not be updated
      *       this.ref.markForCheck();
      *     }, 1000);
@@ -43505,11 +43712,11 @@ var ChangeDetectorRef = (function () {
      * \@Component({
      *   selector: 'giant-list',
      *   template: `
-     *     <li *ngFor="let d of dataProvider.data">Data {{d}}</lig>
+     *     <li *ngFor="let d of dataProvider.data">Data {{d}}</li>
      *   `,
      * })
      * class GiantList {
-     *   constructor(private ref: ChangeDetectorRef, private dataProvider:DataProvider) {
+     *   constructor(private ref: ChangeDetectorRef, private dataProvider: DataProvider) {
      *     ref.detach();
      *     setInterval(() => {
      *       this.ref.detectChanges();
@@ -43596,13 +43803,14 @@ var ChangeDetectorRef = (function () {
      *   template: 'Data: {{dataProvider.data}}'
      * })
      * class LiveData {
-     *   constructor(private ref: ChangeDetectorRef, private dataProvider:DataProvider) {}
+     *   constructor(private ref: ChangeDetectorRef, private dataProvider: DataProvider) {}
      *
      *   set live(value) {
-     *     if (value)
+     *     if (value) {
      *       this.ref.reattach();
-     *     else
+     *     } else {
      *       this.ref.detach();
+     *     }
      *   }
      * }
      *
@@ -47620,6 +47828,9 @@ var ViewContainerRef_ = (function () {
      * @return {?}
      */
     ViewContainerRef_.prototype.insert = function (viewRef, index) {
+        if (viewRef.destroyed) {
+            throw new Error('Cannot insert a destroyed View in a ViewContainer!');
+        }
         var /** @type {?} */ viewRef_ = (viewRef);
         var /** @type {?} */ viewData = viewRef_._view;
         attachEmbeddedView(this._view, this._data, index, viewData);
@@ -47632,6 +47843,9 @@ var ViewContainerRef_ = (function () {
      * @return {?}
      */
     ViewContainerRef_.prototype.move = function (viewRef, currentIndex) {
+        if (viewRef.destroyed) {
+            throw new Error('Cannot move a destroyed View in a ViewContainer!');
+        }
         var /** @type {?} */ previousIndex = this._embeddedViews.indexOf(viewRef._view);
         moveEmbeddedView(this._data, previousIndex, currentIndex);
         return viewRef;
@@ -48891,8 +49105,13 @@ function calcQueryValues(view, startIndex, endIndex, queryDef, values) {
         if (nodeDef.flags & 1 /* TypeElement */ && ((nodeDef.element)).template &&
             (((((nodeDef.element)).template)).nodeMatchedQueries & queryDef.filterId) ===
                 queryDef.filterId) {
-            // check embedded views that were attached at the place of their template.
             var /** @type {?} */ elementData = asElementData(view, i);
+            // check embedded views that were attached at the place of their template,
+            // but process child nodes first if some match the query (see issue #16568)
+            if ((nodeDef.childMatchedQueries & queryDef.filterId) === queryDef.filterId) {
+                calcQueryValues(view, i + 1, i + nodeDef.childCount, queryDef, values);
+                i += nodeDef.childCount;
+            }
             if (nodeDef.flags & 16777216 /* EmbeddedViews */) {
                 var /** @type {?} */ embeddedViews = ((elementData.viewContainer))._embeddedViews;
                 for (var /** @type {?} */ k = 0; k < embeddedViews.length; k++) {
@@ -50055,6 +50274,9 @@ function destroyViewNodes(view) {
         }
         else if (def.flags & 2 /* TypeText */) {
             ((view.renderer.destroyNode))(asTextData(view, i).renderText);
+        }
+        else if (def.flags & 67108864 /* TypeContentQuery */ || def.flags & 134217728 /* TypeViewQuery */) {
+            asQueryList(view, i).destroy();
         }
     }
 }
@@ -51447,11 +51669,12 @@ var NgModuleFactory_ = (function (_super) {
  * <div [\@myAnimationTrigger]="myStatusExp">...</div>
  * ```
  *
- * ## Disable Child Animations
+ * ## Disable Animations
  * A special animation control binding called `\@.disabled` can be placed on an element which will
- * then disable animations for any inner animation triggers situated within the element.
+ * then disable animations for any inner animation triggers situated within the element as well as
+ * any animations on the element itself.
  *
- * When true, the `\@.disabled` binding will prevent inner animations from rendering. The example
+ * When true, the `\@.disabled` binding will prevent all animations from rendering. The example
  * below shows how to use this feature:
  *
  * ```ts
@@ -51477,8 +51700,8 @@ var NgModuleFactory_ = (function (_super) {
  * The `\@childAnimation` trigger will not animate because `\@.disabled` prevents it from happening
  * (when true).
  *
- * Note that `\@.disbled` will only disable inner animations (any animations running on the same
- * element will not be disabled).
+ * Note that `\@.disbled` will only disable all animations (this means any animations running on
+ * the same element will also be disabled).
  *
  * ### Disabling Animations Application-wide
  * When an area of the template is set to have animations disabled, **all** inner components will
@@ -51740,10 +51963,11 @@ function style$1(tokens) {
  * \@experimental Animation support is experimental.
  * @param {?} name
  * @param {?} styles
+ * @param {?=} options
  * @return {?}
  */
-function state$1(name, styles) {
-    return { type: 0 /* State */, name: name, styles: styles };
+function state$1(name, styles, options) {
+    return { type: 0 /* State */, name: name, styles: styles, options: options };
 }
 /**
  * `keyframes` is an animation-specific function that is designed to be used inside of Angular's
@@ -52352,15 +52576,6 @@ function transition$$1(stateChangeExpr, steps) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin__ = __webpack_require__("../../../../rxjs/observable/forkJoin.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_fromPromise__ = __webpack_require__("../../../../rxjs/observable/fromPromise.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_fromPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__ = __webpack_require__("../../../../rxjs/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* unused harmony export AbstractControlDirective */
 /* unused harmony export AbstractFormGroupDirective */
 /* unused harmony export CheckboxControlValueAccessor */
@@ -52432,9 +52647,18 @@ function transition$$1(stateChangeExpr, steps) {
 /* unused harmony export ɵu */
 /* unused harmony export ɵw */
 /* unused harmony export ɵr */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin__ = __webpack_require__("../../../../rxjs/observable/forkJoin.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_fromPromise__ = __webpack_require__("../../../../rxjs/observable/fromPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_fromPromise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__ = __webpack_require__("../../../../rxjs/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 
 /**
- * @license Angular v4.3.1
+ * @license Angular v4.4.1
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -52462,12 +52686,16 @@ var AbstractControlDirective = (function () {
     function AbstractControlDirective() {
     }
     /**
+     * The {\@link FormControl}, {\@link FormGroup}, or {\@link FormArray}
+     * that backs this directive. Most properties fall through to that
+     * instance.
      * @abstract
      * @return {?}
      */
     AbstractControlDirective.prototype.control = function () { };
     Object.defineProperty(AbstractControlDirective.prototype, "value", {
         /**
+         * The value of the control.
          * @return {?}
          */
         get: function () { return this.control ? this.control.value : null; },
@@ -52476,6 +52704,10 @@ var AbstractControlDirective = (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "valid", {
         /**
+         * A control is `valid` when its `status === VALID`.
+         *
+         * In order to have this status, the control must have passed all its
+         * validation checks.
          * @return {?}
          */
         get: function () { return this.control ? this.control.valid : null; },
@@ -52484,6 +52716,10 @@ var AbstractControlDirective = (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "invalid", {
         /**
+         * A control is `invalid` when its `status === INVALID`.
+         *
+         * In order to have this status, the control must have failed
+         * at least one of its validation checks.
          * @return {?}
          */
         get: function () { return this.control ? this.control.invalid : null; },
@@ -52492,54 +52728,23 @@ var AbstractControlDirective = (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "pending", {
         /**
+         * A control is `pending` when its `status === PENDING`.
+         *
+         * In order to have this status, the control must be in the
+         * middle of conducting a validation check.
          * @return {?}
          */
         get: function () { return this.control ? this.control.pending : null; },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(AbstractControlDirective.prototype, "errors", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this.control ? this.control.errors : null; },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AbstractControlDirective.prototype, "pristine", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this.control ? this.control.pristine : null; },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AbstractControlDirective.prototype, "dirty", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this.control ? this.control.dirty : null; },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AbstractControlDirective.prototype, "touched", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this.control ? this.control.touched : null; },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AbstractControlDirective.prototype, "untouched", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this.control ? this.control.untouched : null; },
-        enumerable: true,
-        configurable: true
-    });
     Object.defineProperty(AbstractControlDirective.prototype, "disabled", {
         /**
+         * A control is `disabled` when its `status === DISABLED`.
+         *
+         * Disabled controls are exempt from validation checks and
+         * are not included in the aggregate value of their ancestor
+         * controls.
          * @return {?}
          */
         get: function () { return this.control ? this.control.disabled : null; },
@@ -52548,14 +52753,76 @@ var AbstractControlDirective = (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "enabled", {
         /**
+         * A control is `enabled` as long as its `status !== DISABLED`.
+         *
+         * In other words, it has a status of `VALID`, `INVALID`, or
+         * `PENDING`.
          * @return {?}
          */
         get: function () { return this.control ? this.control.enabled : null; },
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(AbstractControlDirective.prototype, "errors", {
+        /**
+         * Returns any errors generated by failing validation. If there
+         * are no errors, it will return null.
+         * @return {?}
+         */
+        get: function () { return this.control ? this.control.errors : null; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AbstractControlDirective.prototype, "pristine", {
+        /**
+         * A control is `pristine` if the user has not yet changed
+         * the value in the UI.
+         *
+         * Note that programmatic changes to a control's value will
+         * *not* mark it dirty.
+         * @return {?}
+         */
+        get: function () { return this.control ? this.control.pristine : null; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AbstractControlDirective.prototype, "dirty", {
+        /**
+         * A control is `dirty` if the user has changed the value
+         * in the UI.
+         *
+         * Note that programmatic changes to a control's value will
+         * *not* mark it dirty.
+         * @return {?}
+         */
+        get: function () { return this.control ? this.control.dirty : null; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AbstractControlDirective.prototype, "touched", {
+        /**
+         * A control is marked `touched` once the user has triggered
+         * a `blur` event on it.
+         * @return {?}
+         */
+        get: function () { return this.control ? this.control.touched : null; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AbstractControlDirective.prototype, "untouched", {
+        /**
+         * A control is `untouched` if the user has not yet triggered
+         * a `blur` event on it.
+         * @return {?}
+         */
+        get: function () { return this.control ? this.control.untouched : null; },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(AbstractControlDirective.prototype, "statusChanges", {
         /**
+         * Emits an event every time the validation status of the control
+         * is re-calculated.
          * @return {?}
          */
         get: function () {
@@ -52566,6 +52833,8 @@ var AbstractControlDirective = (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "valueChanges", {
         /**
+         * Emits an event every time the value of the control changes, in
+         * the UI or programmatically.
          * @return {?}
          */
         get: function () {
@@ -52576,6 +52845,9 @@ var AbstractControlDirective = (function () {
     });
     Object.defineProperty(AbstractControlDirective.prototype, "path", {
         /**
+         * Returns an array that represents the path from the top-level form
+         * to this control. Each index is the string name of the control on
+         * that level.
          * @return {?}
          */
         get: function () { return null; },
@@ -52583,6 +52855,13 @@ var AbstractControlDirective = (function () {
         configurable: true
     });
     /**
+     * Resets the form control. This means by default:
+     *
+     * * it is marked as `pristine`
+     * * it is marked as `untouched`
+     * * value is set to null
+     *
+     * For more information, see {\@link AbstractControl}.
      * @param {?=} value
      * @return {?}
      */
@@ -52592,6 +52871,10 @@ var AbstractControlDirective = (function () {
             this.control.reset(value);
     };
     /**
+     * Returns true if the control with the given path has the error specified. Otherwise
+     * returns false.
+     *
+     * If no path is given, it checks for the error on the present control.
      * @param {?} errorCode
      * @param {?=} path
      * @return {?}
@@ -52600,6 +52883,10 @@ var AbstractControlDirective = (function () {
         return this.control ? this.control.hasError(errorCode, path) : false;
     };
     /**
+     * Returns error data if the control with the given path has the error specified. Otherwise
+     * returns null or undefined.
+     *
+     * If no path is given, it checks for the error on the present control.
      * @param {?} errorCode
      * @param {?=} path
      * @return {?}
@@ -52845,7 +53132,7 @@ var Validators = (function () {
             return null;
         return function (control) {
             var /** @type {?} */ observables = _executeAsyncValidators(control, presentValidators).map(toObservable);
-            return __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__["map"].call(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin__["forkJoin"])(observables), _mergeErrors);
+            return __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__["map"].call(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin__["forkJoin"])(observables), _mergeErrors);
         };
     };
     return Validators;
@@ -52862,8 +53149,8 @@ function isPresent(o) {
  * @return {?}
  */
 function toObservable(r) {
-    var /** @type {?} */ obs = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisPromise"])(r) ? __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_fromPromise__["fromPromise"])(r) : r;
-    if (!(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisObservable"])(obs))) {
+    var /** @type {?} */ obs = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisPromise"])(r) ? Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_fromPromise__["fromPromise"])(r) : r;
+    if (!(Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisObservable"])(obs))) {
         throw new Error("Expected validator to return Promise or Observable.");
     }
     return obs;
@@ -52917,7 +53204,7 @@ var NG_VALUE_ACCESSOR = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injecti
  */
 var CHECKBOX_VALUE_ACCESSOR = {
     provide: NG_VALUE_ACCESSOR,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return CheckboxControlValueAccessor; }),
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return CheckboxControlValueAccessor; }),
     multi: true,
 };
 /**
@@ -52990,7 +53277,7 @@ CheckboxControlValueAccessor.ctorParameters = function () { return [
  */
 var DEFAULT_VALUE_ACCESSOR = {
     provide: NG_VALUE_ACCESSOR,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return DefaultValueAccessor; }),
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return DefaultValueAccessor; }),
     multi: true
 };
 /**
@@ -52999,7 +53286,7 @@ var DEFAULT_VALUE_ACCESSOR = {
  * @return {?}
  */
 function _isAndroid() {
-    var /** @type {?} */ userAgent = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["b" /* ɵgetDOM */])() ? __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["b" /* ɵgetDOM */])().getUserAgent() : '';
+    var /** @type {?} */ userAgent = Object(__WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["c" /* ɵgetDOM */])() ? Object(__WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["c" /* ɵgetDOM */])().getUserAgent() : '';
     return /android (\d+)/.test(userAgent.toLowerCase());
 }
 /**
@@ -53064,6 +53351,7 @@ var DefaultValueAccessor = (function () {
         this._renderer.setProperty(this._elementRef.nativeElement, 'disabled', isDisabled);
     };
     /**
+     * \@internal
      * @param {?} value
      * @return {?}
      */
@@ -53073,10 +53361,12 @@ var DefaultValueAccessor = (function () {
         }
     };
     /**
+     * \@internal
      * @return {?}
      */
     DefaultValueAccessor.prototype._compositionStart = function () { this._composing = true; };
     /**
+     * \@internal
      * @param {?} value
      * @return {?}
      */
@@ -53149,7 +53439,7 @@ function normalizeAsyncValidator(validator) {
  */
 var NUMBER_VALUE_ACCESSOR = {
     provide: NG_VALUE_ACCESSOR,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return NumberValueAccessor; }),
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return NumberValueAccessor; }),
     multi: true
 };
 /**
@@ -53295,7 +53585,7 @@ var NgControl = (function (_super) {
  */
 var RADIO_VALUE_ACCESSOR = {
     provide: NG_VALUE_ACCESSOR,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return RadioControlValueAccessor; }),
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return RadioControlValueAccessor; }),
     multi: true
 };
 /**
@@ -53498,7 +53788,7 @@ RadioControlValueAccessor.propDecorators = {
  */
 var RANGE_VALUE_ACCESSOR = {
     provide: NG_VALUE_ACCESSOR,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return RangeValueAccessor; }),
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return RangeValueAccessor; }),
     multi: true
 };
 /**
@@ -53576,7 +53866,7 @@ RangeValueAccessor.ctorParameters = function () { return [
  */
 var SELECT_VALUE_ACCESSOR = {
     provide: NG_VALUE_ACCESSOR,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return SelectControlValueAccessor; }),
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return SelectControlValueAccessor; }),
     multi: true
 };
 /**
@@ -53715,8 +54005,8 @@ var SelectControlValueAccessor = (function () {
     SelectControlValueAccessor.prototype.registerOnChange = function (fn) {
         var _this = this;
         this.onChange = function (valueString) {
-            _this.value = valueString;
-            fn(_this._getOptionValue(valueString));
+            _this.value = _this._getOptionValue(valueString);
+            fn(_this.value);
         };
     };
     /**
@@ -53870,7 +54160,7 @@ NgSelectOption.propDecorators = {
  */
 var SELECT_MULTIPLE_VALUE_ACCESSOR = {
     provide: NG_VALUE_ACCESSOR,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return SelectMultipleControlValueAccessor; }),
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return SelectMultipleControlValueAccessor; }),
     multi: true
 };
 /**
@@ -54311,7 +54601,7 @@ function isPropertyUpdated(changes, viewModel) {
     var /** @type {?} */ change = changes['model'];
     if (change.isFirstChange())
         return true;
-    return !__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵlooseIdentical"])(viewModel, change.currentValue);
+    return !Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵlooseIdentical"])(viewModel, change.currentValue);
 }
 var BUILTIN_ACCESSORS = [
     CheckboxControlValueAccessor,
@@ -54530,7 +54820,16 @@ var ngControlStatusHost = {
 };
 /**
  * Directive automatically applied to Angular form controls that sets CSS classes
- * based on control status (valid/invalid/dirty/etc).
+ * based on control status. The following classes are applied as the properties
+ * become true:
+ *
+ * * ng-valid
+ * * ng-invalid
+ * * ng-pending
+ * * ng-pristine
+ * * ng-dirty
+ * * ng-untouched
+ * * ng-touched
  *
  * \@stable
  */
@@ -55147,7 +55446,7 @@ var AbstractControl = (function () {
      */
     AbstractControl.prototype.get = function (path) { return _find(this, path, '.'); };
     /**
-     * Returns true if the control with the given path has the error specified. Otherwise
+     * Returns error data if the control with the given path has the error specified. Otherwise
      * returns null or undefined.
      *
      * If no path is given, it checks for the error on the present control.
@@ -56214,7 +56513,7 @@ var FormArray = (function (_super) {
  */
 var formDirectiveProvider = {
     provide: ControlContainer,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return NgForm; })
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return NgForm; })
 };
 var resolvedPromise = Promise.resolve(null);
 /**
@@ -56490,7 +56789,7 @@ var TemplateDrivenErrors = (function () {
  */
 var modelGroupProvider = {
     provide: ControlContainer,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return NgModelGroup; })
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return NgModelGroup; })
 };
 /**
  * \@whatItDoes Creates and binds a {\@link FormGroup} instance to a DOM element.
@@ -56565,7 +56864,7 @@ NgModelGroup.propDecorators = {
  */
 var formControlBinding = {
     provide: NgControl,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return NgModel; })
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return NgModel; })
 };
 /**
  * `ngModel` forces an additional change detection run when its inputs change:
@@ -56899,7 +57198,7 @@ var ReactiveErrors = (function () {
  */
 var formControlBinding$1 = {
     provide: NgControl,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return FormControlDirective; })
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return FormControlDirective; })
 };
 /**
  * \@whatItDoes Syncs a standalone {\@link FormControl} instance to a form control element.
@@ -56925,12 +57224,12 @@ var formControlBinding$1 = {
  * {\@link AbstractControl}.
  *
  * **Set the value**: You can pass in an initial value when instantiating the {\@link FormControl},
- * or you can set it programmatically later using {\@link AbstractControl#setValue} or
- * {\@link AbstractControl#patchValue}.
+ * or you can set it programmatically later using {\@link AbstractControl#setValue setValue} or
+ * {\@link AbstractControl#patchValue patchValue}.
  *
  * **Listen to value**: If you want to listen to changes in the value of the control, you can
- * subscribe to the {\@link AbstractControl#valueChanges} event.  You can also listen to
- * {\@link AbstractControl#statusChanges} to be notified when the validation status is
+ * subscribe to the {\@link AbstractControl#valueChanges valueChanges} event.  You can also listen to
+ * {\@link AbstractControl#statusChanges statusChanges} to be notified when the validation status is
  * re-calculated.
  *
  * ### Example
@@ -57061,7 +57360,7 @@ FormControlDirective.propDecorators = {
  */
 var formDirectiveProvider$1 = {
     provide: ControlContainer,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return FormGroupDirective; })
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return FormGroupDirective; })
 };
 /**
  * \@whatItDoes Binds an existing {\@link FormGroup} to a DOM element.
@@ -57075,12 +57374,13 @@ var formDirectiveProvider$1 = {
  *
  * **Set value**: You can set the form's initial value when instantiating the
  * {\@link FormGroup}, or you can set it programmatically later using the {\@link FormGroup}'s
- * {\@link AbstractControl#setValue} or {\@link AbstractControl#patchValue} methods.
+ * {\@link AbstractControl#setValue setValue} or {\@link AbstractControl#patchValue patchValue}
+ * methods.
  *
  * **Listen to value**: If you want to listen to changes in the value of the form, you can subscribe
- * to the {\@link FormGroup}'s {\@link AbstractControl#valueChanges} event.  You can also listen to
- * its {\@link AbstractControl#statusChanges} event to be notified when the validation status is
- * re-calculated.
+ * to the {\@link FormGroup}'s {\@link AbstractControl#valueChanges valueChanges} event.  You can also
+ * listen to its {\@link AbstractControl#statusChanges statusChanges} event to be notified when the
+ * validation status is re-calculated.
  *
  * Furthermore, you can listen to the directive's `ngSubmit` event to be notified when the user has
  * triggered a form submission. The `ngSubmit` event will be emitted with the original form
@@ -57334,7 +57634,7 @@ function remove(list, el) {
  */
 var formGroupNameProvider = {
     provide: ControlContainer,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return FormGroupName; })
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return FormGroupName; })
 };
 /**
  * \@whatItDoes Syncs a nested {\@link FormGroup} to a DOM element.
@@ -57363,11 +57663,11 @@ var formGroupNameProvider = {
  *
  * **Set the value**: You can set an initial value for each child control when instantiating
  * the {\@link FormGroup}, or you can set it programmatically later using
- * {\@link AbstractControl#setValue} or {\@link AbstractControl#patchValue}.
+ * {\@link AbstractControl#setValue setValue} or {\@link AbstractControl#patchValue patchValue}.
  *
  * **Listen to value**: If you want to listen to changes in the value of the group, you can
- * subscribe to the {\@link AbstractControl#valueChanges} event.  You can also listen to
- * {\@link AbstractControl#statusChanges} to be notified when the validation status is
+ * subscribe to the {\@link AbstractControl#valueChanges valueChanges} event.  You can also listen to
+ * {\@link AbstractControl#statusChanges statusChanges} to be notified when the validation status is
  * re-calculated.
  *
  * ### Example
@@ -57421,7 +57721,7 @@ FormGroupName.propDecorators = {
 };
 var formArrayNameProvider = {
     provide: ControlContainer,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return FormArrayName; })
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return FormArrayName; })
 };
 /**
  * \@whatItDoes Syncs a nested {\@link FormArray} to a DOM element.
@@ -57584,7 +57884,7 @@ function _hasInvalidParent(parent) {
  */
 var controlNameBinding = {
     provide: NgControl,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return FormControlName; })
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return FormControlName; })
 };
 /**
  * \@whatItDoes Syncs a {\@link FormControl} in an existing {\@link FormGroup} to a form control
@@ -57605,7 +57905,7 @@ var controlNameBinding = {
  * closest {\@link FormGroup} or {\@link FormArray} above it.
  *
  * **Access the control**: You can access the {\@link FormControl} associated with
- * this directive by using the {\@link AbstractControl#get} method.
+ * this directive by using the {\@link AbstractControl#get get} method.
  * Ex: `this.form.get('first');`
  *
  * **Get value**: the `value` property is always synced and available on the {\@link FormControl}.
@@ -57613,11 +57913,11 @@ var controlNameBinding = {
  *
  *  **Set value**: You can set an initial value for the control when instantiating the
  *  {\@link FormControl}, or you can set it programmatically later using
- *  {\@link AbstractControl#setValue} or {\@link AbstractControl#patchValue}.
+ *  {\@link AbstractControl#setValue setValue} or {\@link AbstractControl#patchValue patchValue}.
  *
  * **Listen to value**: If you want to listen to changes in the value of the control, you can
- * subscribe to the {\@link AbstractControl#valueChanges} event.  You can also listen to
- * {\@link AbstractControl#statusChanges} to be notified when the validation status is
+ * subscribe to the {\@link AbstractControl#valueChanges valueChanges} event.  You can also listen to
+ * {\@link AbstractControl#statusChanges statusChanges} to be notified when the validation status is
  * re-calculated.
  *
  * ### Example
@@ -57787,12 +58087,12 @@ FormControlName.propDecorators = {
  */
 var REQUIRED_VALIDATOR = {
     provide: NG_VALIDATORS,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return RequiredValidator; }),
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return RequiredValidator; }),
     multi: true
 };
 var CHECKBOX_REQUIRED_VALIDATOR = {
     provide: NG_VALIDATORS,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return CheckboxRequiredValidator; }),
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return CheckboxRequiredValidator; }),
     multi: true
 };
 /**
@@ -57897,7 +58197,7 @@ CheckboxRequiredValidator.ctorParameters = function () { return []; };
  */
 var EMAIL_VALIDATOR = {
     provide: NG_VALIDATORS,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return EmailValidator; }),
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return EmailValidator; }),
     multi: true
 };
 /**
@@ -57966,7 +58266,7 @@ EmailValidator.propDecorators = {
  */
 var MIN_LENGTH_VALIDATOR = {
     provide: NG_VALIDATORS,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return MinLengthValidator; }),
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return MinLengthValidator; }),
     multi: true
 };
 /**
@@ -58032,7 +58332,7 @@ MinLengthValidator.propDecorators = {
  */
 var MAX_LENGTH_VALIDATOR = {
     provide: NG_VALIDATORS,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return MaxLengthValidator; }),
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return MaxLengthValidator; }),
     multi: true
 };
 /**
@@ -58092,7 +58392,7 @@ MaxLengthValidator.propDecorators = {
 };
 var PATTERN_VALIDATOR = {
     provide: NG_VALIDATORS,
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return PatternValidator; }),
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["forwardRef"])(function () { return PatternValidator; }),
     multi: true
 };
 /**
@@ -58283,7 +58583,7 @@ FormBuilder.ctorParameters = function () { return []; };
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.4.1');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -58457,11 +58757,6 @@ ReactiveFormsModule.ctorParameters = function () { return []; };
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserXhr", function() { return BrowserXhr; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JSONPBackend", function() { return JSONPBackend; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JSONPConnection", function() { return JSONPConnection; });
@@ -58495,9 +58790,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return _createDefaultCookieXSRFStrategy; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵc", function() { return httpFactory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵd", function() { return jsonpFactory; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 
 /**
- * @license Angular v4.3.1
+ * @license Angular v4.4.1
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -59837,7 +60137,7 @@ var CookieXSRFStrategy = (function () {
      * @return {?}
      */
     CookieXSRFStrategy.prototype.configureRequest = function (req) {
-        var /** @type {?} */ xsrfToken = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["b" /* ɵgetDOM */])().getCookie(this._cookieName);
+        var /** @type {?} */ xsrfToken = Object(__WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["c" /* ɵgetDOM */])().getCookie(this._cookieName);
         if (xsrfToken) {
             req.headers.set(this._headerName, xsrfToken);
         }
@@ -60652,7 +60952,7 @@ JsonpModule.ctorParameters = function () { return []; };
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.4.1');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -60686,19 +60986,19 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('4.3.1'
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_compiler__ = __webpack_require__("../../../compiler/@angular/compiler.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* unused harmony export RESOURCE_CACHE_PROVIDER */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return platformBrowserDynamic; });
 /* unused harmony export VERSION */
 /* unused harmony export ɵINTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS */
 /* unused harmony export ɵResourceLoaderImpl */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_compiler__ = __webpack_require__("../../../compiler/@angular/compiler.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 
 /**
- * @license Angular v4.3.1
+ * @license Angular v4.4.1
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -60767,7 +61067,7 @@ ResourceLoaderImpl.ctorParameters = function () { return []; };
  * found in the LICENSE file at https://angular.io/license
  */
 var INTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS = [
-    __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__["c" /* ɵINTERNAL_BROWSER_PLATFORM_PROVIDERS */],
+    __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__["b" /* ɵINTERNAL_BROWSER_PLATFORM_PROVIDERS */],
     {
         provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["COMPILER_OPTIONS"],
         useValue: { providers: [{ provide: __WEBPACK_IMPORTED_MODULE_1__angular_compiler__["a" /* ResourceLoader */], useClass: ResourceLoaderImpl }] },
@@ -60831,7 +61131,7 @@ var CachedResourceLoader = (function (_super) {
 /**
  * @stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.1');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.4.1');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -60846,7 +61146,7 @@ var RESOURCE_CACHE_PROVIDER = [{ provide: __WEBPACK_IMPORTED_MODULE_1__angular_c
 /**
  * @stable
  */
-var platformBrowserDynamic = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["createPlatformFactory"])(__WEBPACK_IMPORTED_MODULE_1__angular_compiler__["b" /* platformCoreDynamic */], 'browserDynamic', INTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS);
+var platformBrowserDynamic = Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["createPlatformFactory"])(__WEBPACK_IMPORTED_MODULE_1__angular_compiler__["b" /* platformCoreDynamic */], 'browserDynamic', INTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS);
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -60870,9 +61170,6 @@ var platformBrowserDynamic = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BrowserModule; });
 /* unused harmony export platformBrowser */
 /* unused harmony export Meta */
@@ -60889,7 +61186,7 @@ var platformBrowserDynamic = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__
 /* unused harmony export DomSanitizer */
 /* unused harmony export VERSION */
 /* unused harmony export ɵBROWSER_SANITIZATION_PROVIDERS */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return INTERNAL_BROWSER_PLATFORM_PROVIDERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return INTERNAL_BROWSER_PLATFORM_PROVIDERS; });
 /* unused harmony export ɵinitDomAdapter */
 /* unused harmony export ɵBrowserDomAdapter */
 /* unused harmony export ɵBrowserPlatformLocation */
@@ -60897,7 +61194,7 @@ var platformBrowserDynamic = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__
 /* unused harmony export ɵBrowserGetTestability */
 /* unused harmony export ɵELEMENT_PROBE_PROVIDERS */
 /* unused harmony export ɵDomAdapter */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getDOM; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getDOM; });
 /* unused harmony export ɵsetRootDomAdapter */
 /* unused harmony export ɵDomRendererFactory2 */
 /* unused harmony export ɵNAMESPACE_URIS */
@@ -60917,9 +61214,12 @@ var platformBrowserDynamic = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__
 /* unused harmony export ɵc */
 /* unused harmony export ɵd */
 /* unused harmony export ɵe */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 
 /**
- * @license Angular v4.3.1
+ * @license Angular v4.4.1
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -62666,7 +62966,7 @@ var BrowserDomAdapter = (function (_super) {
      * @param {?} name
      * @return {?}
      */
-    BrowserDomAdapter.prototype.getCookie = function (name) { return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_common__["ɵparseCookieValue"])(document.cookie, name); };
+    BrowserDomAdapter.prototype.getCookie = function (name) { return Object(__WEBPACK_IMPORTED_MODULE_1__angular_common__["ɵparseCookieValue"])(document.cookie, name); };
     /**
      * @param {?} name
      * @param {?} value
@@ -63073,7 +63373,7 @@ var BrowserGetTestability = (function () {
     /**
      * @return {?}
      */
-    BrowserGetTestability.init = function () { __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["setTestabilityGetter"])(new BrowserGetTestability()); };
+    BrowserGetTestability.init = function () { Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["setTestabilityGetter"])(new BrowserGetTestability()); };
     /**
      * @param {?} registry
      * @return {?}
@@ -63230,7 +63530,7 @@ var CORE_TOKENS_GLOBAL_NAME = 'coreTokens';
  * @return {?}
  */
 function inspectNativeElement(element) {
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["getDebugNode"])(element);
+    return Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["getDebugNode"])(element);
 }
 /**
  * Deprecated. Use the one from '\@angular/core'.
@@ -64312,7 +64612,7 @@ function sanitizeUrl(url) {
     url = String(url);
     if (url.match(SAFE_URL_PATTERN) || url.match(DATA_URL_PATTERN))
         return url;
-    if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])()) {
+    if (Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])()) {
         getDOM().log("WARNING: sanitizing unsafe URL value " + url + " (see http://g.co/ng/security#xss)");
     }
     return 'unsafe:' + url;
@@ -64621,7 +64921,7 @@ function sanitizeHtml(defaultDoc, unsafeHtmlInput) {
             var child = _a[_i];
             DOM.removeChild(parent, child);
         }
-        if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])() && sanitizer.sanitizedSomething) {
+        if (Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])() && sanitizer.sanitizedSomething) {
             DOM.log('WARNING: sanitizing HTML stripped some content (see http://g.co/ng/security#xss).');
         }
         return safeHtml;
@@ -64722,7 +65022,7 @@ function sanitizeStyle(value) {
         value.match(SAFE_STYLE_VALUE) && hasBalancedQuotes(value)) {
         return value; // Safe style values.
     }
-    if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])()) {
+    if (Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])()) {
         getDOM().log("WARNING: sanitizing unsafe style value " + value + " (see http://g.co/ng/security#xss).");
     }
     return 'unsafe';
@@ -65046,7 +65346,7 @@ var BROWSER_SANITIZATION_PROVIDERS = [
 /**
  * \@stable
  */
-var platformBrowser = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["createPlatformFactory"])(__WEBPACK_IMPORTED_MODULE_2__angular_core__["platformCore"], 'browser', INTERNAL_BROWSER_PLATFORM_PROVIDERS);
+var platformBrowser = Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["createPlatformFactory"])(__WEBPACK_IMPORTED_MODULE_2__angular_core__["platformCore"], 'browser', INTERNAL_BROWSER_PLATFORM_PROVIDERS);
 /**
  * @return {?}
  */
@@ -65326,7 +65626,7 @@ var By = (function () {
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.1');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.4.1');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -65360,6 +65660,61 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.1'
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export RouterLink */
+/* unused harmony export RouterLinkWithHref */
+/* unused harmony export RouterLinkActive */
+/* unused harmony export RouterOutlet */
+/* unused harmony export GuardsCheckEnd */
+/* unused harmony export GuardsCheckStart */
+/* unused harmony export NavigationCancel */
+/* unused harmony export NavigationEnd */
+/* unused harmony export NavigationError */
+/* unused harmony export NavigationStart */
+/* unused harmony export ResolveEnd */
+/* unused harmony export ResolveStart */
+/* unused harmony export RouteConfigLoadEnd */
+/* unused harmony export RouteConfigLoadStart */
+/* unused harmony export RoutesRecognized */
+/* unused harmony export RouteReuseStrategy */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Router; });
+/* unused harmony export ROUTES */
+/* unused harmony export ROUTER_CONFIGURATION */
+/* unused harmony export ROUTER_INITIALIZER */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return RouterModule; });
+/* unused harmony export provideRoutes */
+/* unused harmony export ChildrenOutletContexts */
+/* unused harmony export OutletContext */
+/* unused harmony export NoPreloading */
+/* unused harmony export PreloadAllModules */
+/* unused harmony export PreloadingStrategy */
+/* unused harmony export RouterPreloader */
+/* unused harmony export ActivatedRoute */
+/* unused harmony export ActivatedRouteSnapshot */
+/* unused harmony export RouterState */
+/* unused harmony export RouterStateSnapshot */
+/* unused harmony export PRIMARY_OUTLET */
+/* unused harmony export convertToParamMap */
+/* unused harmony export UrlHandlingStrategy */
+/* unused harmony export DefaultUrlSerializer */
+/* unused harmony export UrlSegment */
+/* unused harmony export UrlSegmentGroup */
+/* unused harmony export UrlSerializer */
+/* unused harmony export UrlTree */
+/* unused harmony export VERSION */
+/* unused harmony export ɵROUTER_PROVIDERS */
+/* unused harmony export ɵflatten */
+/* unused harmony export ɵa */
+/* unused harmony export ɵg */
+/* unused harmony export ɵh */
+/* unused harmony export ɵi */
+/* unused harmony export ɵd */
+/* unused harmony export ɵc */
+/* unused harmony export ɵj */
+/* unused harmony export ɵf */
+/* unused harmony export ɵb */
+/* unused harmony export ɵe */
+/* unused harmony export ɵk */
+/* unused harmony export ɵl */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("../../../../tslib/tslib.es6.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
@@ -65400,64 +65755,9 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.1'
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_rxjs_operator_filter__ = __webpack_require__("../../../../rxjs/operator/filter.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_rxjs_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21_rxjs_operator_filter__);
-/* unused harmony export RouterLink */
-/* unused harmony export RouterLinkWithHref */
-/* unused harmony export RouterLinkActive */
-/* unused harmony export RouterOutlet */
-/* unused harmony export GuardsCheckEnd */
-/* unused harmony export GuardsCheckStart */
-/* unused harmony export NavigationCancel */
-/* unused harmony export NavigationEnd */
-/* unused harmony export NavigationError */
-/* unused harmony export NavigationStart */
-/* unused harmony export ResolveEnd */
-/* unused harmony export ResolveStart */
-/* unused harmony export RouteConfigLoadEnd */
-/* unused harmony export RouteConfigLoadStart */
-/* unused harmony export RoutesRecognized */
-/* unused harmony export RouteReuseStrategy */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Router; });
-/* unused harmony export ROUTES */
-/* unused harmony export ROUTER_CONFIGURATION */
-/* unused harmony export ROUTER_INITIALIZER */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RouterModule; });
-/* unused harmony export provideRoutes */
-/* unused harmony export ChildrenOutletContexts */
-/* unused harmony export OutletContext */
-/* unused harmony export NoPreloading */
-/* unused harmony export PreloadAllModules */
-/* unused harmony export PreloadingStrategy */
-/* unused harmony export RouterPreloader */
-/* unused harmony export ActivatedRoute */
-/* unused harmony export ActivatedRouteSnapshot */
-/* unused harmony export RouterState */
-/* unused harmony export RouterStateSnapshot */
-/* unused harmony export PRIMARY_OUTLET */
-/* unused harmony export convertToParamMap */
-/* unused harmony export UrlHandlingStrategy */
-/* unused harmony export DefaultUrlSerializer */
-/* unused harmony export UrlSegment */
-/* unused harmony export UrlSegmentGroup */
-/* unused harmony export UrlSerializer */
-/* unused harmony export UrlTree */
-/* unused harmony export VERSION */
-/* unused harmony export ɵROUTER_PROVIDERS */
-/* unused harmony export ɵflatten */
-/* unused harmony export ɵa */
-/* unused harmony export ɵg */
-/* unused harmony export ɵh */
-/* unused harmony export ɵi */
-/* unused harmony export ɵd */
-/* unused harmony export ɵc */
-/* unused harmony export ɵj */
-/* unused harmony export ɵf */
-/* unused harmony export ɵb */
-/* unused harmony export ɵe */
-/* unused harmony export ɵk */
-/* unused harmony export ɵl */
 
 /**
- * @license Angular v4.3.1
+ * @license Angular v4.4.1
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -66059,7 +66359,7 @@ function forEach(map$$1, callback) {
  */
 function waitForMap(obj, fn) {
     if (Object.keys(obj).length === 0) {
-        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])({});
+        return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])({});
     }
     var /** @type {?} */ waitHead = [];
     var /** @type {?} */ waitTail = [];
@@ -66091,16 +66391,16 @@ function andObservables(observables) {
  * @return {?}
  */
 function wrapIntoObservable(value) {
-    if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵisObservable"])(value)) {
+    if (Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵisObservable"])(value)) {
         return value;
     }
-    if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵisPromise"])(value)) {
+    if (Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["ɵisPromise"])(value)) {
         // Use `Promise.resolve()` to wrap promise-like instances.
         // Required ie when a Resolver returns a AngularJS `$q` promise to correctly trigger the
         // change detection.
-        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_18_rxjs_observable_fromPromise__["fromPromise"])(Promise.resolve(value));
+        return Object(__WEBPACK_IMPORTED_MODULE_18_rxjs_observable_fromPromise__["fromPromise"])(Promise.resolve(value));
     }
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(value);
+    return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(/** @type {?} */ (value));
 }
 /**
  * @license
@@ -66974,7 +67274,7 @@ var ApplyRedirects = (function () {
             var /** @type {?} */ expanded$ = _this.expandSegmentAgainstRoute(ngModule, segmentGroup, routes, r, segments, outlet, allowRedirects);
             return __WEBPACK_IMPORTED_MODULE_15_rxjs_operator_catch__["_catch"].call(expanded$, function (e) {
                 if (e instanceof NoMatch) {
-                    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(null);
+                    return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(null);
                 }
                 throw e;
             });
@@ -66984,7 +67284,7 @@ var ApplyRedirects = (function () {
         return __WEBPACK_IMPORTED_MODULE_15_rxjs_operator_catch__["_catch"].call(first$, function (e, _) {
             if (e instanceof __WEBPACK_IMPORTED_MODULE_17_rxjs_util_EmptyError__["EmptyError"]) {
                 if (_this.noLeftoversInUrl(segmentGroup, segments, outlet)) {
-                    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(new UrlSegmentGroup([], {}));
+                    return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(new UrlSegmentGroup([], {}));
                 }
                 throw new NoMatch(segmentGroup);
             }
@@ -67093,7 +67393,7 @@ var ApplyRedirects = (function () {
                     return new UrlSegmentGroup(segments, {});
                 });
             }
-            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(new UrlSegmentGroup(segments, {}));
+            return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(new UrlSegmentGroup(segments, {}));
         }
         var _a = match(rawSegmentGroup, route, segments), matched = _a.matched, consumedSegments = _a.consumedSegments, lastChild = _a.lastChild;
         if (!matched)
@@ -67109,7 +67409,7 @@ var ApplyRedirects = (function () {
                 return __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_map__["map"].call(expanded$_1, function (children) { return new UrlSegmentGroup(consumedSegments, children); });
             }
             if (childConfig.length === 0 && slicedSegments.length === 0) {
-                return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(new UrlSegmentGroup(consumedSegments, {}));
+                return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(new UrlSegmentGroup(consumedSegments, {}));
             }
             var /** @type {?} */ expanded$ = _this.expandSegment(childModule, segmentGroup, childConfig, slicedSegments, PRIMARY_OUTLET, true);
             return __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_map__["map"].call(expanded$, function (cs) { return new UrlSegmentGroup(consumedSegments.concat(cs.segments), cs.children); });
@@ -67124,12 +67424,12 @@ var ApplyRedirects = (function () {
         var _this = this;
         if (route.children) {
             // The children belong to the same module
-            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(new LoadedRouterConfig(route.children, ngModule));
+            return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(new LoadedRouterConfig(route.children, ngModule));
         }
         if (route.loadChildren) {
             // lazy children belong to the loaded module
             if (route._loadedConfig !== undefined) {
-                return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(route._loadedConfig);
+                return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(route._loadedConfig);
             }
             return __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_mergeMap__["mergeMap"].call(runCanLoadGuard(ngModule.injector, route), function (shouldLoad) {
                 if (shouldLoad) {
@@ -67141,7 +67441,7 @@ var ApplyRedirects = (function () {
                 return canLoadFails(route);
             });
         }
-        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(new LoadedRouterConfig([], ngModule));
+        return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(new LoadedRouterConfig([], ngModule));
     };
     /**
      * @param {?} route
@@ -67154,7 +67454,7 @@ var ApplyRedirects = (function () {
         while (true) {
             res = res.concat(c.segments);
             if (c.numberOfChildren === 0) {
-                return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(res);
+                return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(res);
             }
             if (c.numberOfChildren > 1 || !c.children[PRIMARY_OUTLET]) {
                 return namedOutletsRedirect(/** @type {?} */ ((route.redirectTo)));
@@ -67268,8 +67568,8 @@ var ApplyRedirects = (function () {
 function runCanLoadGuard(moduleInjector, route) {
     var /** @type {?} */ canLoad = route.canLoad;
     if (!canLoad || canLoad.length === 0)
-        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(true);
-    var /** @type {?} */ obs = __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_map__["map"].call(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(canLoad), function (injectionToken) {
+        return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(true);
+    var /** @type {?} */ obs = __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_map__["map"].call(Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(canLoad), function (injectionToken) {
         var /** @type {?} */ guard = moduleInjector.get(injectionToken);
         return wrapIntoObservable(guard.canLoad ? guard.canLoad(route) : guard(route));
     });
@@ -67292,7 +67592,10 @@ function match(segmentGroup, route, segments) {
     var /** @type {?} */ res = matcher(segments, segmentGroup, route);
     if (!res) {
         return {
-            matched: false, consumedSegments: /** @type {?} */ ([]), lastChild: 0, positionalParamSegments: {},
+            matched: false,
+            consumedSegments: /** @type {?} */ ([]),
+            lastChild: 0,
+            positionalParamSegments: {},
         };
     }
     return {
@@ -68519,7 +68822,7 @@ var Recognizer = (function () {
             var /** @type {?} */ rootNode = new TreeNode(root, children);
             var /** @type {?} */ routeState = new RouterStateSnapshot(this.url, rootNode);
             this.inheritParamsAndData(routeState._root);
-            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(routeState);
+            return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(routeState);
         }
         catch (e) {
             return new __WEBPACK_IMPORTED_MODULE_14_rxjs_Observable__["Observable"](function (obs) { return obs.error(e); });
@@ -68982,15 +69285,15 @@ var RouterConfigLoader = (function () {
     RouterConfigLoader.prototype.loadModuleFactory = function (loadChildren) {
         var _this = this;
         if (typeof loadChildren === 'string') {
-            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_18_rxjs_observable_fromPromise__["fromPromise"])(this.loader.load(loadChildren));
+            return Object(__WEBPACK_IMPORTED_MODULE_18_rxjs_observable_fromPromise__["fromPromise"])(this.loader.load(loadChildren));
         }
         else {
             return __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_mergeMap__["mergeMap"].call(wrapIntoObservable(loadChildren()), function (t) {
                 if (t instanceof __WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModuleFactory"]) {
-                    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(t);
+                    return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(t);
                 }
                 else {
-                    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_18_rxjs_observable_fromPromise__["fromPromise"])(_this.compiler.compileModuleAsync(t));
+                    return Object(__WEBPACK_IMPORTED_MODULE_18_rxjs_observable_fromPromise__["fromPromise"])(_this.compiler.compileModuleAsync(t));
                 }
             });
         }
@@ -69087,7 +69390,7 @@ function defaultErrorHandler(error) {
  * @return {?}
  */
 function defaultRouterHook(snapshot) {
-    return (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(null));
+    return (Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(null));
 }
 /**
  * \@whatItDoes Provides the navigation and url manipulation capabilities.
@@ -69307,7 +69610,7 @@ var Router = (function () {
     Router.prototype.createUrlTree = function (commands, navigationExtras) {
         if (navigationExtras === void 0) { navigationExtras = {}; }
         var relativeTo = navigationExtras.relativeTo, queryParams = navigationExtras.queryParams, fragment = navigationExtras.fragment, preserveQueryParams = navigationExtras.preserveQueryParams, queryParamsHandling = navigationExtras.queryParamsHandling, preserveFragment = navigationExtras.preserveFragment;
-        if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])() && preserveQueryParams && (console) && (console.warn)) {
+        if (Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])() && preserveQueryParams && (console) && (console.warn)) {
             console.warn('preserveQueryParams is deprecated, use queryParamsHandling instead.');
         }
         var /** @type {?} */ a = relativeTo || this.routerState.root;
@@ -69443,7 +69746,7 @@ var Router = (function () {
                 return nav.promise.catch(function () { });
             }
             else {
-                return (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(null));
+                return (Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(null));
             }
         })
             .subscribe(function () { });
@@ -69542,7 +69845,7 @@ var Router = (function () {
                 });
             }
             else {
-                urlAndSnapshot$ = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])({ appliedUrl: url, snapshot: precreatedState });
+                urlAndSnapshot$ = Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])({ appliedUrl: url, snapshot: precreatedState });
             }
             var /** @type {?} */ beforePreactivationDone$ = __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_mergeMap__["mergeMap"].call(urlAndSnapshot$, function (p) {
                 return __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_map__["map"].call(_this.hooks.beforePreactivation(p.snapshot), function () { return p; });
@@ -69560,7 +69863,7 @@ var Router = (function () {
             var /** @type {?} */ preactivationCheckGuards$ = __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_mergeMap__["mergeMap"].call(preactivationTraverse$, function (_a) {
                 var appliedUrl = _a.appliedUrl, snapshot = _a.snapshot;
                 if (_this.navigationId !== id)
-                    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(false);
+                    return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(false);
                 _this.triggerEvent(new GuardsCheckStart(id, _this.serializeUrl(url), appliedUrl, snapshot));
                 return __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_map__["map"].call(preActivation.checkGuards(), function (shouldActivate) {
                     _this.triggerEvent(new GuardsCheckEnd(id, _this.serializeUrl(url), appliedUrl, snapshot, shouldActivate));
@@ -69569,7 +69872,7 @@ var Router = (function () {
             });
             var /** @type {?} */ preactivationResolveData$ = __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_mergeMap__["mergeMap"].call(preactivationCheckGuards$, function (p) {
                 if (_this.navigationId !== id)
-                    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(false);
+                    return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(false);
                 if (p.shouldActivate && preActivation.isActivating()) {
                     _this.triggerEvent(new ResolveStart(id, _this.serializeUrl(url), p.appliedUrl, p.snapshot));
                     return __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_map__["map"].call(preActivation.resolveData(), function () {
@@ -69578,7 +69881,7 @@ var Router = (function () {
                     });
                 }
                 else {
-                    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(p);
+                    return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(p);
                 }
             });
             var /** @type {?} */ preactivationDone$ = __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_mergeMap__["mergeMap"].call(preactivationResolveData$, function (p) {
@@ -69723,10 +70026,10 @@ var PreActivation = (function () {
     PreActivation.prototype.checkGuards = function () {
         var _this = this;
         if (!this.isDeactivating() && !this.isActivating()) {
-            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(true);
+            return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(true);
         }
         var /** @type {?} */ canDeactivate$ = this.runCanDeactivateChecks();
-        return __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_mergeMap__["mergeMap"].call(canDeactivate$, function (canDeactivate) { return canDeactivate ? _this.runCanActivateChecks() : __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(false); });
+        return __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_mergeMap__["mergeMap"].call(canDeactivate$, function (canDeactivate) { return canDeactivate ? _this.runCanActivateChecks() : Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(false); });
     };
     /**
      * @return {?}
@@ -69734,8 +70037,8 @@ var PreActivation = (function () {
     PreActivation.prototype.resolveData = function () {
         var _this = this;
         if (!this.isActivating())
-            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(null);
-        var /** @type {?} */ checks$ = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(this.canActivateChecks);
+            return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(null);
+        var /** @type {?} */ checks$ = Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(this.canActivateChecks);
         var /** @type {?} */ runningChecks$ = __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_concatMap__["concatMap"].call(checks$, function (check) { return _this.runResolve(check.route); });
         return __WEBPACK_IMPORTED_MODULE_13_rxjs_operator_reduce__["reduce"].call(runningChecks$, function (_, __) { return _; });
     };
@@ -69868,7 +70171,7 @@ var PreActivation = (function () {
      */
     PreActivation.prototype.runCanDeactivateChecks = function () {
         var _this = this;
-        var /** @type {?} */ checks$ = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(this.canDeactivateChecks);
+        var /** @type {?} */ checks$ = Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(this.canDeactivateChecks);
         var /** @type {?} */ runningChecks$ = __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_mergeMap__["mergeMap"].call(checks$, function (check) { return _this.runCanDeactivate(check.component, check.route); });
         return __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_every__["every"].call(runningChecks$, function (result) { return result === true; });
     };
@@ -69877,8 +70180,8 @@ var PreActivation = (function () {
      */
     PreActivation.prototype.runCanActivateChecks = function () {
         var _this = this;
-        var /** @type {?} */ checks$ = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(this.canActivateChecks);
-        var /** @type {?} */ runningChecks$ = __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_mergeMap__["mergeMap"].call(checks$, function (check) { return andObservables(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])([_this.runCanActivateChild(check.path), _this.runCanActivate(check.route)])); });
+        var /** @type {?} */ checks$ = Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(this.canActivateChecks);
+        var /** @type {?} */ runningChecks$ = __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_concatMap__["concatMap"].call(checks$, function (check) { return andObservables(Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])([_this.runCanActivateChild(check.path), _this.runCanActivate(check.route)])); });
         return __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_every__["every"].call(runningChecks$, function (result) { return result === true; });
     };
     /**
@@ -69889,8 +70192,8 @@ var PreActivation = (function () {
         var _this = this;
         var /** @type {?} */ canActivate = future._routeConfig ? future._routeConfig.canActivate : null;
         if (!canActivate || canActivate.length === 0)
-            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(true);
-        var /** @type {?} */ obs = __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_map__["map"].call(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(canActivate), function (c) {
+            return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(true);
+        var /** @type {?} */ obs = __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_map__["map"].call(Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(canActivate), function (c) {
             var /** @type {?} */ guard = _this.getToken(c, future);
             var /** @type {?} */ observable;
             if (guard.canActivate) {
@@ -69914,8 +70217,8 @@ var PreActivation = (function () {
             .reverse()
             .map(function (p) { return _this.extractCanActivateChild(p); })
             .filter(function (_) { return _ !== null; });
-        return andObservables(__WEBPACK_IMPORTED_MODULE_11_rxjs_operator_map__["map"].call(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(canActivateChildGuards), function (d) {
-            var /** @type {?} */ obs = __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_map__["map"].call(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(d.guards), function (c) {
+        return andObservables(__WEBPACK_IMPORTED_MODULE_11_rxjs_operator_map__["map"].call(Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(canActivateChildGuards), function (d) {
+            var /** @type {?} */ obs = __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_map__["map"].call(Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(d.guards), function (c) {
                 var /** @type {?} */ guard = _this.getToken(c, d.node);
                 var /** @type {?} */ observable;
                 if (guard.canActivateChild) {
@@ -69948,8 +70251,8 @@ var PreActivation = (function () {
         var _this = this;
         var /** @type {?} */ canDeactivate = curr && curr._routeConfig ? curr._routeConfig.canDeactivate : null;
         if (!canDeactivate || canDeactivate.length === 0)
-            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(true);
-        var /** @type {?} */ canDeactivate$ = __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_mergeMap__["mergeMap"].call(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(canDeactivate), function (c) {
+            return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(true);
+        var /** @type {?} */ canDeactivate$ = __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_mergeMap__["mergeMap"].call(Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(canDeactivate), function (c) {
             var /** @type {?} */ guard = _this.getToken(c, curr);
             var /** @type {?} */ observable;
             if (guard.canDeactivate) {
@@ -69984,7 +70287,7 @@ var PreActivation = (function () {
         var _this = this;
         var /** @type {?} */ keys = Object.keys(resolve);
         if (keys.length === 0) {
-            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])({});
+            return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])({});
         }
         if (keys.length === 1) {
             var /** @type {?} */ key_1 = keys[0];
@@ -69994,7 +70297,7 @@ var PreActivation = (function () {
             });
         }
         var /** @type {?} */ data = {};
-        var /** @type {?} */ runningResolvers$ = __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_mergeMap__["mergeMap"].call(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(keys), function (key) {
+        var /** @type {?} */ runningResolvers$ = __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_mergeMap__["mergeMap"].call(Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(keys), function (key) {
             return __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_map__["map"].call(_this.getResolver(resolve[key], future), function (value) {
                 data[key] = value;
                 return value;
@@ -70133,7 +70436,7 @@ var ActivateRoutes = (function () {
         if (context) {
             var /** @type {?} */ children = nodeChildrenAsMap(route);
             var /** @type {?} */ contexts_1 = route.value.component ? context.children : parentContexts;
-            forEach(children, function (v, k) { _this.deactivateRouteAndItsChildren(v, contexts_1); });
+            forEach(children, function (v, k) { return _this.deactivateRouteAndItsChildren(v, contexts_1); });
             if (context.outlet) {
                 // Destroy the component
                 context.outlet.deactivate();
@@ -70334,7 +70637,7 @@ function validateCommands(commands) {
  *
  * You can tell the directive to how to handle queryParams, available options are:
  *  - 'merge' merge the queryParams into the current queryParams
- *  - 'preserve' prserve the current queryParams
+ *  - 'preserve' preserve the current queryParams
  *  - default / '' use the queryParams only
  *  same options for {\@link NavigationExtras#queryParamsHandling}
  *
@@ -70396,7 +70699,7 @@ var RouterLink = (function () {
          * @return {?}
          */
         set: function (value) {
-            if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])() && (console) && (console.warn)) {
+            if (Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])() && (console) && (console.warn)) {
                 console.warn('preserveQueryParams is deprecated!, use queryParamsHandling instead.');
             }
             this.preserve = value;
@@ -70507,7 +70810,7 @@ var RouterLinkWithHref = (function () {
          * @return {?}
          */
         set: function (value) {
-            if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])() && (console) && (console.warn)) {
+            if (Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["isDevMode"])() && (console) && (console.warn)) {
                 console.warn('preserveQueryParams is deprecated, use queryParamsHandling instead.');
             }
             this.preserve = value;
@@ -71165,7 +71468,7 @@ var PreloadAllModules = (function () {
      * @return {?}
      */
     PreloadAllModules.prototype.preload = function (route, fn) {
-        return __WEBPACK_IMPORTED_MODULE_15_rxjs_operator_catch__["_catch"].call(fn(), function () { return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(null); });
+        return __WEBPACK_IMPORTED_MODULE_15_rxjs_operator_catch__["_catch"].call(fn(), function () { return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(null); });
     };
     return PreloadAllModules;
 }());
@@ -71186,7 +71489,7 @@ var NoPreloading = (function () {
      * @param {?} fn
      * @return {?}
      */
-    NoPreloading.prototype.preload = function (route, fn) { return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(null); };
+    NoPreloading.prototype.preload = function (route, fn) { return Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(null); };
     return NoPreloading;
 }());
 /**
@@ -71260,7 +71563,7 @@ var RouterPreloader = (function () {
                 res.push(this.processRoutes(ngModule, route.children));
             }
         }
-        return __WEBPACK_IMPORTED_MODULE_19_rxjs_operator_mergeAll__["mergeAll"].call(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(res));
+        return __WEBPACK_IMPORTED_MODULE_19_rxjs_operator_mergeAll__["mergeAll"].call(Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_from__["from"])(res));
     };
     /**
      * @param {?} ngModule
@@ -71531,7 +71834,7 @@ function setupRouter(ref, urlSerializer, contexts, location, injector, loader, c
         router.errorHandler = opts.errorHandler;
     }
     if (opts.enableTracing) {
-        var /** @type {?} */ dom_1 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_20__angular_platform_browser__["b" /* ɵgetDOM */])();
+        var /** @type {?} */ dom_1 = Object(__WEBPACK_IMPORTED_MODULE_20__angular_platform_browser__["c" /* ɵgetDOM */])();
         router.events.subscribe(function (e) {
             dom_1.logGroup("Router Event: " + ((e.constructor)).name);
             dom_1.log(e.toString());
@@ -71596,7 +71899,7 @@ var RouterInitializer = (function () {
                         // subsequent navigations should not be delayed
                     }
                     else {
-                        return (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(null));
+                        return (Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_of__["of"])(null));
                     }
                 };
                 router.initialNavigation();
@@ -71707,7 +72010,7 @@ function provideRouterInitializer() {
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.3.1');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["Version"]('4.4.1');
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.

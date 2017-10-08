@@ -9,3 +9,7 @@ a:link {
 a:visited {
     text-decoration: none;
 }
+
+hr {
+    margin: 10px 0 5px 0;
+}
