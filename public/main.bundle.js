@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <flash-messages></flash-messages>\r\n</div>\r\n<router-outlet></router-outlet>\r\n<hr>\r\n<div class=\"footer\" style=\"text-align: right\">版权所有. <a href=\"https://xubingyang.com\">xubingyang.com</a> 2012-2017 &copy; All right reserved.\r\n</div>"
+module.exports = "<div class=\"container\">\r\n  <flash-messages></flash-messages>\r\n</div>\r\n<router-outlet></router-outlet>\r\n<hr>\r\n<div class=\"footer\" style=\"text-align: right\">版权所有. <a href=\"https://xubingyang.com\">xubingyang.com</a> 2012-2017 &copy; All right reserved.\r\n</div>"
 
 /***/ }),
 
@@ -553,7 +553,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".navbar {\r\n  border-radius: 0px;\r\n  border-bottom: #008ed6 2px solid;\r\n}\r\n\r\nhr { \r\n  margin: 0px; \r\n}\r\na.nav-link {\r\n  cursor: pointer;\r\n}", ""]);
+exports.push([module.i, ".navbar {\r\n  border-radius: 0px;\r\n  border-bottom: #008ed6 3px solid;\r\n}\r\n\r\nhr { \r\n  margin: 0px; \r\n}\r\na.nav-link {\r\n  cursor: pointer;\r\n}", ""]);
 
 // exports
 
