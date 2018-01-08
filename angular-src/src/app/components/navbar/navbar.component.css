@@ -6,3 +6,6 @@
 hr { 
   margin: 0px; 
 }
+a.nav-link {
+  cursor: pointer;
+}

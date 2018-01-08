@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">后台管理系统</a>
+        <a class="navbar-brand" [routerLink]="['/dashboard']">后台管理系统</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false"
             aria-label="Toggle navigation" (click)="toggleState()">
             <span class="navbar-toggler-icon"></span>
@@ -8,21 +8,20 @@
         <div class="collapse navbar-collapse" id="navbar" [ngClass]="{ 'in': isIn }">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                    <a class="nav-link" [routerLink]="['/']">主页</a>
+                    <a class="nav-link" [routerLink]="['/dashboard']">主页</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" [routerLink]="['/login']">登录</a></li>
                 <li class="nav-item" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" [routerLink]="['/register']">注册</a></li>
                 <li class="nav-item dropdown" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">VPN发布<span class="caret"></span></a>
+                    <a class="nav-link dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">VPN发布<span class="caret"></span></a>
                     <div class="dropdown-menu" role="menu" aria-labelledby="dropdown">
-                        <a *ngIf="authService.loggedIn()" [routerLink]="['/shadowsocks']" class="dropdown-item">ShadowSocks</a>
-                        <a *ngIf="authService.loggedIn()" [routerLink]="['/gfwpress']" class="dropdown-item">GFW.press</a>
+                        <a *ngIf="authService.loggedIn()" [routerLink]="['/vpn']" class="dropdown-item">Shadowsocks</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">用户<span class="caret"></span></a>
+                    <a class="nav-link dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">用户<span class="caret"></span></a>
                     <div class="dropdown-menu" role="menu" aria-labelledby="dropdown">
                         <a *ngIf="authService.loggedIn()" [routerLink]="['/contacts']" class="dropdown-item">通讯录</a>
                         <a *ngIf="authService.loggedIn()" [routerLink]="['/profile']" class="dropdown-item">用户信息</a>
