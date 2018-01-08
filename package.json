@@ -4,7 +4,6 @@
   "description": "A login app build for my.xubingyang.com",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app"
   },
   "dependencies": {
